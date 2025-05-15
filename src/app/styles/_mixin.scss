@@ -1,0 +1,86 @@
+@use "variable" as *;
+@use "svg" as *;
+@mixin layout-list-details {
+    position: relative;
+    background-color: rgba(#fff, 0.9);
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-size: inherit;
+    margin-top: 2em;
+    @include sp {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+    }
+    div {
+        position: relative;
+        font-size: inherit;
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: subgrid;
+        gap: 0 2em;
+        padding-block: 0.8em;
+        @include sp {
+            grid-column: unset;
+            grid-template-columns: unset;
+            grid-auto-flow: row;
+            padding-block: 4vw;
+        }
+        &:not(:last-of-type) {
+            border-bottom: 1px solid #f1f1f2;
+        }
+        &:last-of-type {
+            border-bottom: 2px solid $baseBlack;
+        }
+        dt {
+            font-size: FZ(14);
+            display: grid;
+            place-content: center;
+            padding: 0.5em 2em;
+            @include sp {
+                font-size: FZ(16);
+                place-content: center left;
+                padding: 0 4vw;
+            }
+        }
+        dd {
+            align-self: center;
+            font-size: FZ(14);
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.04em;
+            @include sp {
+                padding: 2vw 4vw;
+                font-size: FZ(16);
+            }
+            span {
+                line-height: 2em;
+                @include sp {
+                    padding: 0;
+                }
+            }
+            p {
+                font-size: 1em;
+                line-height: 2em;
+                @include sp {
+                    padding: 0;
+                }
+                a {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+@mixin decoration-btn-link {
+    color: $baseWhite;
+    background-color: $baseBrown;
+    font-size: FZ(16);
+    padding: 1em 2em;
+    letter-spacing: 0.08em;
+    transition: 0.3s ease-out;
+    @include hover {
+        background-color: $baseWhite;
+        color: $baseBrown;
+    }
+}

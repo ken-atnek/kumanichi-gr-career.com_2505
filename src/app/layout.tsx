@@ -1,23 +1,35 @@
 /* =======================================
- * 西養寺 Layout
+ * 熊日グループキャリア採用 Layout
  * URL:src/app/layout.tsx
- * Created: 2025-05-08
- * Last updated: 2025-05-08
+ * Created: 2025-05-15
+ * Last updated: 2025-05-15
  * ======================================= */
 
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
+import { Noto_Sans_JP } from 'next/font/google';
+import { Jost } from 'next/font/google';
 
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
-
+const notoSans = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+  display: 'swap',
+});
+const jost = Jost({
+  subsets: ['latin'], // 必要に応じて 'latin-ext' など追加
+  weight: ['400', '500', '700'], // 必要なウェイトだけ指定
+  display: 'swap', // 推奨
+});
 // 実際の本番環境かどうかを判定
 const isRealProduction = process.env.NEXT_PUBLIC_IS_REAL_PROD === 'true';
 
 // 本番のみ metadataBase を設定
 const metadataBase = isRealProduction
   ? new URL(
-      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://kumamoto-saiyouji.jp/'
+      process.env.NEXT_PUBLIC_METADATA_BASE ||
+        'https://kumanichi-gr-career.com/'
     )
   : undefined;
 
@@ -25,9 +37,8 @@ export const metadata: Metadata = {
   ...(isRealProduction && {
     metadataBase,
     openGraph: {
-      title: ' 西養寺',
-      description:
-        '西養寺は1584年に熊本・荒尾で開基以来、御仏の心と共に地域のよりどころとして存在してきました。日常の暮らしや結婚式や葬儀などの人生の節目においても仏様のお教えに沿った形でお手伝いも行っております。',
+      title: ' 熊日グループキャリア採用',
+      description: '熊日グループキャリア採用',
       url: metadataBase?.toString(),
       type: 'website',
       images: [
@@ -35,15 +46,13 @@ export const metadata: Metadata = {
           url: './images/ogp.jpg',
           width: 1200,
           height: 630,
-          alt: '亀の甲温泉のOGP画像',
+          alt: '熊日グループキャリア採用のOGP画像',
         },
       ],
     },
   }),
-  title: ' 西養寺',
-  description: isRealProduction
-    ? '西養寺は1584年に熊本・荒尾で開基以来、御仏の心と共に地域のよりどころとして存在してきました。日常の暮らしや結婚式や葬儀などの人生の節目においても仏様のお教えに沿った形でお手伝いも行っております。。'
-    : undefined,
+  title: ' 熊日グループキャリア採用',
+  description: isRealProduction ? '熊日グループキャリア採用。' : undefined,
   robots: isRealProduction ? 'index, follow' : 'noindex, nofollow',
   icons: [
     {
@@ -63,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${notoSans.className} ${jost.className}`}>
       <head>
         <meta
           name="robots"

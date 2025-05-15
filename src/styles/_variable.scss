@@ -29,22 +29,13 @@ $articleMaxWidth: 117rem;
 /* =================================
  * フォント設定
  * ------------------------------ */
-@font-face {
-    font-display: swap;
-    font-family: ManyoGyoshoStd;
-    src: url("./fonts/ManyoGyoshoStd.woff2") format("woff2");
-}
-@font-face {
-    font-display: swap;
-    font-family: GrecoStd;
-    src: url("./fonts/FOT-GrecoStd-M.woff2") format("woff2");
-}
 
 /* フォント設定 */
 @mixin SunSerif {
     font-family:
-        "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-        "BIZ UDPGothic", Meiryo, sans-serif;
+        "Jost", "Noto Sans JP", "Helvetica Neue", Arial,
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo,
+        sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -55,25 +46,13 @@ $articleMaxWidth: 117rem;
     font-weight: 400;
     font-style: normal;
 }
-@mixin grecoStd {
-    font-family: GrecoStd, serif;
-    font-style: normal;
-}
-@mixin ManyoGyoshoStd {
-    font-family: ManyoGyoshoStd, serif;
-    font-style: normal;
-}
 
 /* =================================
  * カラー変数
  * ------------------------------ */
-$baseRed: #f00;
-$baseWhite: #fff;
-$baseBrown: #aaa64c;
-$articleBgWhite: #f0f7ff;
-$baseBlack: #0d0015;
-$fontBlack: #2d2d2d;
-$baseLightGray: #f3f3f3;
+$base-white: #e3e4eb;
+$base-black: #232323;
+$base-blue: #1ba0fb;
 
 /* =================================
  * レスポンシブ設定

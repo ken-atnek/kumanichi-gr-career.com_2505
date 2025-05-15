@@ -1,0 +1,27 @@
+@use "variable" as *;
+@use "svg" as *;
+
+.containerSlide {
+    height: 80rem;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -15rem;
+        background: url(../../assets/images/slide-object.webp) no-repeat center
+            center / contain;
+        aspect-ratio: 466/559;
+        width: 47rem;
+    }
+    .blockSlide {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 80rem;
+        background: url(../../assets/images/slide01.webp) no-repeat center
+            top/cover;
+    }
+}

@@ -13,6 +13,11 @@
         align-items: center;
         padding-top: 25rem;
         padding-bottom: 15rem;
+        @include sp {
+            padding-top: 30vw;
+            padding-bottom: 26vw;
+            padding-inline: 4vw;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -22,11 +27,20 @@
                 center center / contain;
             aspect-ratio: 466/559;
             width: 40rem;
+            @include sp {
+                width: 60vw;
+                right: -20vw;
+            }
         }
         h2 {
             font-size: FZ(36);
             font-weight: 700;
             letter-spacing: 0.24em;
+            @include sp {
+                z-index: 1;
+                font-size: FZ(28);
+                text-align: center;
+            }
         }
         .h2Sidebar {
             position: relative;
@@ -34,12 +48,18 @@
             align-items: center;
             font-size: inherit;
             margin-top: 2em;
+            @include sp {
+                z-index: 1;
+            }
             .itemLink {
                 @include NotoSansJP;
                 font-size: FZ(17);
                 font-weight: 700;
                 letter-spacing: 0.12em;
                 text-decoration: underline;
+                @include sp {
+                    font-size: FZ(14);
+                }
                 &::after {
                     content: "|";
                 }
@@ -48,6 +68,9 @@
                 font-size: FZ(17);
                 font-weight: 700;
                 letter-spacing: 0.08em;
+                @include sp {
+                    font-size: FZ(14);
+                }
             }
         }
     }
@@ -56,6 +79,10 @@
         flex-direction: column;
         padding: 2em 0;
         max-width: $articleMaxWidth;
+        @include sp {
+            max-width: unset;
+            padding: 6vw 4vw;
+        }
         .itemImage {
             width: 100%;
             img {
@@ -150,6 +177,11 @@
             font-size: inherit;
             display: flex;
             justify-content: space-between;
+            @include sp {
+                flex-direction: column;
+                align-items: center;
+                gap: 2vw 0;
+            }
             .itemLink {
                 font-size: FZ(13);
                 color: #0842af;

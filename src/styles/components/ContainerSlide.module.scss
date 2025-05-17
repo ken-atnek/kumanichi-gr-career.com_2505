@@ -5,6 +5,9 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    @include sp {
+        height: 120vw;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -14,6 +17,10 @@
             center center / contain;
         aspect-ratio: 466/559;
         width: 47rem;
+        @include sp {
+            width: 60vw;
+            right: -20vw;
+        }
     }
     .blockSlide {
         position: fixed;
@@ -34,25 +41,12 @@
             transition: opacity 1s ease;
             will-change: opacity, transform;
         }
-
-        // .fixedOverlay {
-        //     position: absolute;
-        //     inset: 0;
-        //     clip-path: inset(20% 15% 0 15%);
-        //     z-index: 2;
-        //     pointer-events: none;
-        //     background: rgba(#fff, 0.8);
-        //     mix-blend-mode: hard-light;
-        //     opacity: 0;
-        //     animation: overlayFadeIn 0.8s ease forwards;
-        // }
         .isEnteringA {
             opacity: 1;
             animation: fade-rotate-left 0.8s ease-out;
             z-index: 1;
         }
         .slideImageWrapper {
-            // background-color: #fdfdfd;
             position: absolute;
             width: 100vw;
             height: 80rem;
@@ -117,17 +111,26 @@
         justify-content: flex-end;
         color: #fff;
         flex-direction: column;
+        @include sp {
+            padding: 20vw 4vw;
+        }
         h1 {
             font-size: FZ(36);
             font-weight: 700;
             letter-spacing: 0.2em;
             line-height: 2em;
+            @include sp {
+                font-size: FZ(20);
+            }
         }
         p {
             font-size: FZ(20);
             font-weight: 700;
             letter-spacing: 0.12em;
             margin-top: 1em;
+            @include sp {
+                font-size: FZ(16);
+            }
         }
     }
 }

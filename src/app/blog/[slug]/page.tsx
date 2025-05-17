@@ -5,19 +5,19 @@
  * Created: 2025-05-16
  * Last updated: 2025-05-16
  * ======================================= */
-import { notFound } from 'next/navigation';
 import { blogList } from '@/data/blogListData';
 import Link from 'next/link';
 import styles from '@/styles/components/ContainerBlogDetail.module.scss';
 import Image from 'next/image';
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+import { notFound } from 'next/navigation';
 
-const BlogDetailPage = ({ params }: Props) => {
-  const currentIndex = blogList.findIndex((item) => item.slug === params.slug);
+const BlogDetailPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const { slug } = await params;
+  const currentIndex = blogList.findIndex((item) => item.slug === slug);
   const post = blogList[currentIndex];
 
   if (!post) return notFound();
@@ -74,8 +74,10 @@ const BlogDetailPage = ({ params }: Props) => {
 
 export default BlogDetailPage;
 
-export async function generateStaticParams() {
-  return blogList.map((post) => ({
-    slug: post.slug,
-  }));
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return await Promise.resolve(
+    blogList.map((post) => ({
+      slug: post.slug,
+    }))
+  );
 }

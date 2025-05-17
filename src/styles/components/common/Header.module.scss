@@ -9,6 +9,9 @@
     justify-content: center;
     z-index: 5;
     transition: 0.5s ease-out;
+    @include sp {
+        padding-inline: 0;
+    }
     article {
         max-width: $articleMaxWidth;
         display: flex;
@@ -16,6 +19,9 @@
         align-items: center;
         padding-top: 2.5em;
         padding-bottom: 2.5em;
+        @include sp {
+            padding: 4vw;
+        }
         .linkH1 {
             font-size: inherit;
             color: #fff;
@@ -25,6 +31,9 @@
                 font-size: FZ(24);
                 font-weight: 500;
                 letter-spacing: 0.4em;
+                @include sp {
+                    font-size: FZ(18);
+                }
             }
             @include hover {
                 color: $base-blue;
@@ -43,6 +52,25 @@
                 letter-spacing: 0.07em;
                 &.linkTop {
                     color: #0842af;
+                }
+            }
+            @include sp {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                height: 100dvh;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20vw 0 0 8vw;
+                background-color: #fff;
+                translate: 100vw;
+                transition: 0.3s ease-out;
+                opacity: 0;
+                &.is-open {
+                    translate: 0;
+                    opacity: 1;
                 }
             }
         }
@@ -68,7 +96,7 @@
     position: fixed;
     top: 2vw;
     right: 2vw;
-    width: 10vw;
+    width: 8vw;
     aspect-ratio: 1;
 
     // border: solid 1px #000000;
@@ -76,24 +104,24 @@
     display: none;
     @include sp {
         display: block;
-        background-color: #000;
+        background-color: #fff;
     }
     span {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 60%;
-        height: 2px;
-        background-color: #fff;
+        height: 1px;
+        background-color: $base-black;
         transition: 0.3s ease-out;
         &:nth-of-type(1) {
-            translate: -50% calc(-50% - 2vw);
+            translate: -50% calc(-50% - 4px);
         }
         &:nth-of-type(2) {
             translate: -50% -50%;
         }
         &:nth-of-type(3) {
-            translate: -50% calc(-50% + 2vw);
+            translate: -50% calc(-50% + 4px);
         }
     }
     &.is-open {

@@ -12,6 +12,9 @@
     padding: 8em 2em;
     background-color: #fff;
     z-index: 5;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     article {
         display: flex;
         flex-direction: column;
@@ -24,6 +27,13 @@
             padding-bottom: 0.5em;
             margin-left: 1em;
             margin-bottom: 2em;
+            @include sp {
+                margin-left: unset;
+                border-bottom: unset;
+                padding-bottom: unset;
+                font-size: FZ(24);
+                margin-bottom: 6vw;
+            }
         }
     }
 }
@@ -53,6 +63,9 @@
         align-self: center;
         margin-top: 1em;
         letter-spacing: 0.08em;
+        @include sp {
+            font-size: FZ(24);
+        }
     }
     .title {
         color: $base-blue;
@@ -61,6 +74,10 @@
         align-self: center;
         margin-top: 0.8em;
         letter-spacing: 0.04em;
+        @include sp {
+            text-align: center;
+            font-size: FZ(64);
+        }
     }
     nav {
         border: 1px solid;
@@ -70,6 +87,9 @@
         display: flex;
         justify-content: center;
         gap: 0 4em;
+        @include sp {
+            display: none;
+        }
         .itemLink {
             color: $dark-blue;
             font-size: FZ(13);
@@ -95,10 +115,16 @@
     background-image: url("../assets/images/01_diagonalstripes-blk.webp");
     background-repeat: repeat;
     padding-block: 2em;
+    @include sp {
+        padding-block: 4vw;
+    }
 }
 .containerGroup {
     padding: 0;
     background-color: #fff;
+    @include sp {
+        padding: 6vw 4vw;
+    }
 }
 .containerFlow {
     background-color: #d9d9d9;
@@ -115,9 +141,16 @@
         padding: 0 2em 2em;
         align-items: center;
         max-width: $articleMaxWidth;
+        @include sp {
+            max-width: unset;
+            padding: 4vw;
+        }
         p {
             font-size: FZ(13);
             line-height: 1.8em;
+            @include sp {
+                text-align: center;
+            }
         }
         .boxContact {
             width: 100%;
@@ -128,6 +161,11 @@
             font-size: inherit;
             align-items: center;
             gap: 0 1em;
+            @include sp {
+                flex-direction: column;
+                padding: 6vw;
+                gap: 2vw 0;
+            }
             h3 {
                 font-size: FZ(17);
             }
@@ -145,11 +183,17 @@
         flex-direction: column;
         align-items: center;
         padding: 4em 2em;
+        @include sp {
+            padding: 4vw;
+        }
         p {
             font-size: FZ(14);
             font-weight: 700;
             color: #fff;
             letter-spacing: 0.04em;
+            @include sp {
+                font-size: FZ(12);
+            }
         }
         .linkDl {
             color: $dark-blue;

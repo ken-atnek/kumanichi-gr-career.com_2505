@@ -50,9 +50,15 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 150);
+      if (window.innerWidth > 768) {
+        setIsScrolled(window.scrollY > 150);
+      } else {
+        setIsScrolled(false);
+      }
     };
     window.addEventListener('scroll', handleScroll);
+    // Run once on mount in case already scrolled
+    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

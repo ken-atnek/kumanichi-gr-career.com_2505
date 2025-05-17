@@ -10,6 +10,11 @@
     font-size: inherit;
     padding-top: 5em;
     padding-bottom: 8em;
+    @include sp {
+        gap: 14vw 0;
+        padding-top: unset;
+        padding-bottom: unset;
+    }
     &::before,
     &::after {
         content: "";
@@ -18,6 +23,9 @@
         translate: -50%;
         width: 100vw;
         z-index: -1;
+        @include sp {
+            display: none;
+        }
     }
     &::before {
         background-color: #e3e4eb;
@@ -37,6 +45,9 @@
         position: relative;
         display: flex;
         font-size: inherit;
+        @include sp {
+            flex-direction: column;
+        }
         .boxImage {
             position: relative;
             flex: 1;
@@ -57,6 +68,10 @@
             flex-direction: column;
             gap: 2em 0;
             translate: 0 3em;
+            @include sp {
+                translate: unset;
+                padding: 6vw 4vw;
+            }
             h3 {
                 font-size: FZ(20);
                 font-weight: 700;
@@ -78,6 +93,9 @@
                 font-size: FZ(12);
                 border-radius: 100vmax;
                 transition: 0.3s ease-out;
+                @include sp {
+                    align-self: flex-end;
+                }
                 span {
                     position: relative;
                     padding-left: 1em;
@@ -104,6 +122,12 @@
             flex-direction: row-reverse;
             .boxDetails {
                 align-items: flex-end;
+                @include sp {
+                    align-items: flex-start;
+                }
+            }
+            @include sp {
+                flex-direction: column;
             }
         }
     }

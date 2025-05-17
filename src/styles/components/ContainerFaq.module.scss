@@ -19,6 +19,10 @@
             padding: 2em;
             width: 100%;
             transition: 0.3s ease-out;
+            @include sp {
+                padding: 3vw 2vw;
+                font-size: FZ(12);
+            }
             &.open {
                 background-color: #0842af;
             }
@@ -38,6 +42,9 @@
                 padding: 2em;
                 letter-spacing: 0.08em;
                 line-height: 1.8em;
+                @include sp {
+                    padding: 4vw;
+                }
             }
         }
     }

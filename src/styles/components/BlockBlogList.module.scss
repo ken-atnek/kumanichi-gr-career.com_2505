@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 1.6em;
+    @include sp {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+    }
     .blogItem {
         position: relative;
         font-size: inherit;
@@ -14,6 +18,9 @@
         gap: 0;
         grid-row: span 5;
         margin-bottom: 2em;
+        @include sp {
+            margin-bottom: 4vw;
+        }
         .imageWrapper {
             position: relative;
             aspect-ratio: 340/191;

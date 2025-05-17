@@ -1,0 +1,162 @@
+@use "variable" as *;
+@use "svg" as *;
+.containerNews,
+.containerAbout,
+.containerMap,
+.containerGroup,
+.containerFlow,
+.containerFaq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 2em;
+    background-color: #fff;
+    z-index: 5;
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        h2 {
+            font-size: FZ(30);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-bottom: 1px solid rgb(35 35 35 / 15%);
+            padding-bottom: 0.5em;
+            margin-left: 1em;
+            margin-bottom: 2em;
+        }
+    }
+}
+.containerNews {
+    padding-bottom: 3em;
+    .linkBlog {
+        font-size: FZ(12);
+        align-self: center;
+        border: 3px solid $base-blue;
+        color: $base-blue;
+        padding: 1.4em 4em;
+        border-radius: 100vmax;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+        margin-top: 2em;
+        transition: 0.3s ease-out;
+        @include hover {
+            background-color: $base-blue;
+            color: #fff;
+        }
+    }
+}
+.containerAbout {
+    .h2Sidebar {
+        font-size: FZ(30);
+        font-weight: 700;
+        align-self: center;
+        margin-top: 1em;
+        letter-spacing: 0.08em;
+    }
+    .title {
+        color: $base-blue;
+        font-size: FZ(80);
+        font-weight: 700;
+        align-self: center;
+        margin-top: 0.8em;
+        letter-spacing: 0.04em;
+    }
+    nav {
+        border: 1px solid;
+        font-size: inherit;
+        margin-inline: 2em;
+        margin-top: 5em;
+        display: flex;
+        justify-content: center;
+        gap: 0 4em;
+        .itemLink {
+            color: $dark-blue;
+            font-size: FZ(13);
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 0.08em;
+            padding-block: 1.8em;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+                left: calc(100% + 0.2em);
+                width: 1em;
+                aspect-ratio: 1/0.85;
+                background-color: $dark-blue;
+                clip-path: polygon(0 0, 100% 0, 50% 100%);
+            }
+        }
+    }
+}
+.containerMap {
+    background-image: url("../assets/images/01_diagonalstripes-blk.webp");
+    background-repeat: repeat;
+    padding-block: 2em;
+}
+.containerGroup {
+    padding: 0;
+    background-color: #fff;
+}
+.containerFlow {
+    background-color: #d9d9d9;
+    padding-bottom: 3em;
+}
+.containerContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    .innerHead {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em 2em;
+        align-items: center;
+        max-width: $articleMaxWidth;
+        p {
+            font-size: FZ(13);
+            line-height: 1.8em;
+        }
+        .boxContact {
+            width: 100%;
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            padding: 2.4em 3em;
+            font-size: inherit;
+            align-items: center;
+            gap: 0 1em;
+            h3 {
+                font-size: FZ(17);
+            }
+            a {
+                color: $base-blue;
+                font-size: FZ(20);
+                font-weight: 700;
+                letter-spacing: 0.04em;
+            }
+        }
+    }
+    .innerFoot {
+        background-color: $base-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4em 2em;
+        p {
+            font-size: FZ(14);
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 0.04em;
+        }
+        .linkDl {
+            color: $dark-blue;
+            font-size: FZ(26);
+            font-weight: 700;
+            margin-top: 0.8em;
+            letter-spacing: 0.08em;
+        }
+    }
+}

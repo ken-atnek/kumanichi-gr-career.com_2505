@@ -6,6 +6,7 @@
     align-items: center;
     @include SunSerif;
     padding-inline: 2em;
+    background-color: #fff;
     article {
         display: flex;
         flex-direction: column;
@@ -45,12 +46,15 @@
                         background-color: $base-black;
                     }
                 }
+                &.linkTop {
+                    color: #0842af;
+                }
             }
         }
         .copyright {
             align-self: flex-start;
             font-size: FZ(12);
-            color: rgba(35, 35, 35, 0.7);
+            color: rgb(35 35 35 / 70%);
         }
     }
 }

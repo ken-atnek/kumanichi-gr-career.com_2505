@@ -1,0 +1,50 @@
+@use "variable" as *;
+@use "svg" as *;
+.listFlow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 1em;
+    font-size: inherit;
+    li {
+        background-color: #fff;
+        position: relative;
+        display: grid;
+        grid-row: span 3;
+        grid-template-rows: subgrid;
+        padding-top: 3rem;
+        font-size: inherit;
+        gap: 0.5em 0;
+        .wrapHead {
+            display: flex;
+            font-size: inherit;
+            align-items: center;
+            padding-inline: 2rem;
+            gap: 0 0.5em;
+            span {
+                font-size: FZ(17);
+                font-weight: 600;
+                color: #ff3e90;
+            }
+            h3 {
+                font-size: FZ(17);
+                font-weight: 700;
+            }
+        }
+        .itemDescription {
+            padding-inline: 2rem;
+            font-size: FZ(12);
+            letter-spacing: 0.04em;
+            line-height: 1.6em;
+            text-align: justify;
+        }
+        .wrapImage {
+            font-size: inherit;
+            margin-top: 1em;
+            aspect-ratio: 282/187;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use "variable" as *;
+@use "svg" as *;
+.blockBlogList {
+    position: relative;
+    font-size: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1.6em;
+    .blogItem {
+        position: relative;
+        font-size: inherit;
+        display: grid;
+        grid-template-rows: subgrid;
+        gap: 0;
+        grid-row: span 5;
+        margin-bottom: 2em;
+        .imageWrapper {
+            position: relative;
+            aspect-ratio: 340/191;
+            img {
+                object-fit: cover;
+            }
+        }
+        .boxContents {
+            grid-row: span 4;
+            display: grid;
+            grid-template-rows: subgrid;
+            font-size: inherit;
+            padding-inline: 1.4em;
+            gap: 0;
+            margin-top: 2em;
+            padding-bottom: 1.4em;
+            .head {
+                color: rgb(35 35 35 / 45%);
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+            }
+            h3 {
+                font-size: FZ(18);
+                font-weight: 700;
+                margin-top: 0.5em;
+                letter-spacing: 0.12em;
+                line-height: 1.6em;
+            }
+            hr {
+                font-size: inherit;
+                border-top: 1px solid rgb(35 35 35 / 30%);
+                margin: 1em 0;
+            }
+            .category {
+                width: max-content;
+                padding: 0.5em 1em;
+                border: 1px solid rgb(35 35 35 / 30%);
+                border-top-left-radius: 3px;
+                font-size: 1rem;
+                letter-spacing: 0.2em;
+                margin-top: 1em;
+            }
+        }
+    }
+}

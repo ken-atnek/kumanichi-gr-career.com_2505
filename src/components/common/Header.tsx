@@ -8,10 +8,9 @@
 import styles from '@/styles/components/common/Header.module.scss';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 const Header = () => {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -49,8 +48,20 @@ const Header = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 150);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.containerHeader}>
+    <header
+      className={`${styles.containerHeader} ${isScrolled ? styles.isActive : ''}`}
+    >
       <article>
         <Link href="/" className={styles.linkH1}>
           <h1>kumanichigroup</h1>
@@ -61,22 +72,46 @@ const Header = () => {
             !isOpen ? styles.closing : ''
           }`}
         >
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/"
+            className={`${styles.itemLink} ${styles.linkTop}`}
+            onClick={closeMenu}
+          >
             TOP
           </Link>
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/#ContainerNews"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
             NEWS
           </Link>
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/#ContainerAbout"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
             about us
           </Link>
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/#ContainerFlow"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
             flow
           </Link>
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/#ContainerFaq"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
             faq
           </Link>
-          <Link href="/" className={styles.itemLink} onClick={closeMenu}>
+          <Link
+            href="/#ContainerContact"
+            className={styles.itemLink}
+            onClick={closeMenu}
+          >
             entry
           </Link>
         </nav>

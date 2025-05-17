@@ -1,16 +1,17 @@
 @use "variable" as *;
 @use "svg" as *;
-
 .containerSlide {
     height: 80rem;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
     &::after {
         content: "";
         position: absolute;
         bottom: 0;
         right: -15rem;
-        background: url(../../assets/images/slide-object.webp) no-repeat center
-            center / contain;
+        background: url("../../assets/images/slide-object.webp") no-repeat
+            center center / contain;
         aspect-ratio: 466/559;
         width: 47rem;
     }
@@ -21,7 +22,112 @@
         width: 100%;
         height: 100vh;
         height: 80rem;
-        background: url(../../assets/images/slide01.webp) no-repeat center
-            top/cover;
+        .slideImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center top;
+            opacity: 0;
+            transition: opacity 1s ease;
+            will-change: opacity, transform;
+        }
+
+        // .fixedOverlay {
+        //     position: absolute;
+        //     inset: 0;
+        //     clip-path: inset(20% 15% 0 15%);
+        //     z-index: 2;
+        //     pointer-events: none;
+        //     background: rgba(#fff, 0.8);
+        //     mix-blend-mode: hard-light;
+        //     opacity: 0;
+        //     animation: overlayFadeIn 0.8s ease forwards;
+        // }
+        .isEnteringA {
+            opacity: 1;
+            animation: fade-rotate-left 0.8s ease-out;
+            z-index: 1;
+        }
+        .slideImageWrapper {
+            // background-color: #fdfdfd;
+            position: absolute;
+            width: 100vw;
+            height: 80rem;
+            animation: fade-in-wrapper 0.8s ease;
+            z-index: 2;
+            .isEnteringB {
+                opacity: 1;
+                animation: fade-rotate-right 0.8s ease-out;
+                z-index: 1;
+            }
+        }
+        .isExiting {
+            opacity: 0;
+            animation: fade-out 0.8s ease;
+            z-index: 0;
+        }
+        @keyframes fade-rotate-left {
+            0% {
+                opacity: 0;
+                transform: rotate(-15deg) scale(1.8);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+        @keyframes fade-rotate-right {
+            0% {
+                opacity: 0;
+                transform: rotate(15deg) scale(2.4);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+                transform: none;
+            }
+            100% {
+                opacity: 0;
+                transform: rotate(15deg) scale(2);
+            }
+        }
+        @keyframes fade-in-wrapper {
+            0% {
+                opacity: 1;
+                clip-path: inset(20% 10% 0 10%);
+            }
+            100% {
+                opacity: 1;
+                clip-path: inset(20% 20% 0 20%);
+            }
+        }
+    }
+    article {
+        height: 100%;
+        padding: 3em;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        flex-direction: column;
+        h1 {
+            font-size: FZ(36);
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            line-height: 2em;
+        }
+        p {
+            font-size: FZ(20);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            margin-top: 1em;
+        }
     }
 }

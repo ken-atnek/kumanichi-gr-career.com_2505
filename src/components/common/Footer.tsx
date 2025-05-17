@@ -11,22 +11,22 @@ const Footer = () => {
     <footer className={styles.containerFooter}>
       <article>
         <nav>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/" className={`${styles.itemLink} ${styles.linkTop}`}>
             TOP
           </Link>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/#ContainerNews" className={styles.itemLink}>
             NEWS
           </Link>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/#ContainerAbout" className={styles.itemLink}>
             about us
           </Link>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/#ContainerFlow" className={styles.itemLink}>
             flow
           </Link>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/#ContainerFaq" className={styles.itemLink}>
             faq
           </Link>
-          <Link href="/" className={styles.itemLink}>
+          <Link href="/#ContainerContact" className={styles.itemLink}>
             entry
           </Link>
         </nav>

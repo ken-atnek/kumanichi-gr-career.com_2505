@@ -10,8 +10,7 @@ import '@/styles/globals.scss';
 import { Noto_Sans_JP } from 'next/font/google';
 import { Jost } from 'next/font/google';
 
-import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer';
+
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -37,8 +36,6 @@ export const metadata: Metadata = {
   ...(isRealProduction && {
     metadataBase,
     openGraph: {
-      title: ' 熊日グループキャリア採用',
-      description: '熊日グループキャリア採用',
       url: metadataBase?.toString(),
       type: 'website',
       images: [
@@ -87,11 +84,7 @@ export default function RootLayout({
           content="telephone=no, address=no, email=no"
         />
       </head>
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

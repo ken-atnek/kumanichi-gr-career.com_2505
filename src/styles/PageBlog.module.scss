@@ -1,0 +1,346 @@
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+// このファイル全体のルールを無効にする
+/* =================================
+** 一覧ページ
+------------------------------ */
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    article {
+        background-color: #e3e4eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25rem;
+        padding-bottom: 15rem;
+        @include sp {
+            padding-top: 30vw;
+            padding-bottom: 26vw;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -15rem;
+            background: url("../assets/images/slide-object.webp") no-repeat
+                center center / contain;
+            aspect-ratio: 466/559;
+            width: 40rem;
+            @include sp {
+                width: 60vw;
+                right: -20vw;
+            }
+        }
+        h2 {
+            font-size: FZ(36);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            @include sp {
+                font-size: FZ(28);
+            }
+        }
+        .breadcrumb {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: inherit;
+            margin-top: 2em;
+            .itemLink {
+                @include NotoSansJP;
+                font-size: FZ(17);
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-decoration: underline;
+                &::after {
+                    content: "|";
+                }
+            }
+            span {
+                @include NotoSansJP;
+                font-size: FZ(17);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.containerBlogList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0;
+    background-color: #f2f2f2;
+
+    article {
+        display: flex;
+        max-width: $articleMaxWidth;
+        flex-direction: column;
+    }
+}
+
+.blogList {
+    position: relative;
+    font-size: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1.6em;
+    @include sp {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+    }
+    .blogItem {
+        position: relative;
+        font-size: inherit;
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        gap: 0;
+        margin-bottom: 2em;
+        background-color: #fff;
+        @include sp {
+            margin-bottom: 4vw;
+        }
+        &.isTopPage {
+            background-color: transparent;
+        }
+        .itemLink {
+            position: absolute;
+            inset: 0;
+            z-index: +1;
+        }
+        .thumbnail {
+            position: relative;
+            aspect-ratio: 340/191;
+            object-fit: cover;
+        }
+        .wrapContents {
+            grid-row: span 4;
+            display: grid;
+            grid-template-rows: subgrid;
+            font-size: inherit;
+            padding-inline: 1.4em;
+            gap: 0;
+            margin-top: 2em;
+            padding-bottom: 1.4em;
+            .head {
+                color: rgb(35 35 35 / 45%);
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+            }
+            h3 {
+                font-size: FZ(18);
+                font-weight: 700;
+                margin-top: 0.5em;
+                letter-spacing: 0.12em;
+                line-height: 1.6em;
+            }
+            hr {
+                font-size: inherit;
+                border-top: 1px solid rgb(35 35 35 / 30%);
+                margin: 1em 0;
+            }
+            .category {
+                width: max-content;
+                padding: 0.5em 1em;
+                border: 1px solid rgb(35 35 35 / 30%);
+                border-top-left-radius: 3px;
+                font-size: 1rem;
+                letter-spacing: 0.2em;
+                margin-top: 1em;
+            }
+        }
+    }
+}
+
+/* =================================
+** 詳細ページ
+------------------------------ */
+.containerDetailTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    article {
+        background-color: #e3e4eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 25rem;
+        padding-bottom: 15rem;
+        @include sp {
+            padding-top: 30vw;
+            padding-bottom: 26vw;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -15rem;
+            background: url("../assets/images/slide-object.webp") no-repeat
+                center center / contain;
+            aspect-ratio: 466/559;
+            width: 40rem;
+            @include sp {
+                width: 60vw;
+                right: -20vw;
+            }
+        }
+        h2 {
+            font-size: FZ(36);
+            letter-spacing: 0.24em;
+            font-weight: 600;
+            text-transform: uppercase;
+            @include sp {
+                font-size: FZ(28);
+            }
+        }
+        .breadcrumb {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: inherit;
+            margin-top: 2em;
+            a {
+                @include NotoSansJP;
+                font-size: FZ(17);
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-decoration: underline;
+                &::after {
+                    content: "|";
+                }
+            }
+            .head {
+                @include NotoSansJP;
+                font-size: FZ(17);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.containerDetailContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 2em;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: $articleMaxWidth;
+        border-bottom: solid 1px rgba(35, 35, 35, 0.5);
+
+        .thumb {
+            width: 100%;
+        }
+        .wrapHead {
+            width: 100%;
+            font-size: inherit;
+            border-bottom: solid 1px rgba(35, 35, 35, 0.5);
+            padding: 1em 0 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 0 1em;
+            .date {
+                font-size: FZ(14);
+            }
+            .category {
+                border: solid 1px rgba(35, 35, 35, 0.5);
+                padding: 0.5em 1em;
+                font-size: FZ(12);
+            }
+        }
+        .articleBody {
+            font-size: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2em 0;
+            h4 {
+                font-size: FZ(20);
+                font-weight: 500;
+            }
+            dl {
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                gap: 1em 0;
+                padding: 2em 0;
+                img {
+                    width: fit-content;
+                    max-width: 100%;
+                    margin-inline: auto;
+                }
+                dt {
+                    font-size: FZ(18);
+                    margin-top: 1.6em;
+                    letter-spacing: 0.2em;
+                }
+                dd {
+                    font-size: FZ(14);
+                    text-align: justify;
+                    line-height: 1.8em;
+                    letter-spacing: 0.04em;
+                }
+            }
+            p {
+                font-size: FZ(14);
+                line-height: 1.8em;
+                letter-spacing: 0.04em;
+                text-align: justify;
+            }
+        }
+    }
+    .articleNav {
+        width: 100%;
+        max-width: $articleMaxWidth;
+        padding-top: 2em;
+        font-size: inherit;
+        ul {
+            font-size: inherit;
+            display: flex;
+            justify-content: space-between;
+            li {
+                font-size: inherit;
+                a {
+                    position: relative;
+                    font-size: FZ(16);
+                    transition: 0.3s ease-out;
+                    &::after {
+                        transition: 0.3s ease-out;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        width: 1.2em;
+                        @include svg-arrow-blog("555555");
+                    }
+                    &.prev {
+                        padding-left: 1.6em;
+                        &::after {
+                            left: 0;
+                            scale: -1 1;
+                        }
+                    }
+                    &.next {
+                        padding-right: 1.6em;
+                        &::after {
+                            right: 0;
+                        }
+                    }
+                    @include hover {
+                        &::after {
+                            @include svg-arrow-blog("1ba0fb");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

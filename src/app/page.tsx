@@ -10,10 +10,14 @@ import ContainerSlide from '@/components/ContainerSlide';
 import BlogList from '@/components/blog/BlogList';
 import { blogData } from '@/data/blogData';
 import OrganizationalChart from '@/assets/images/organizational-chart.webp';
+import entrySheetStyles from '@/styles/components/ContainerEntrySheet.module.scss';
+import ContainerEntrySheet from '@/components/ContainerEntrySheet';
 import Image from 'next/image';
 import ContainerGroup from '@/components/ContainerGroup';
 import ContainerFlow from '@/components/ContainerFlow';
 import ContainerFaq from '@/components/ContainerFaq';
+import { newsList } from '@/data/newsList';
+import NewsList from '@/components/NewsList';
 import type { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
@@ -34,6 +38,11 @@ export default function Home() {
         <section className={styles.containerNews} id="ContainerNews">
           <article>
             <h2>news</h2>
+            <NewsList items={newsList} />
+          </article>
+        </section>
+        <section className={styles.containerBlog} id="ContainerBlog">
+          <article>
             <BlogList items={blogData.slice(0, 3)} isTopPage />
             <Link href="/blog/" className={styles.linkBlog}>
               すべてを見る
@@ -100,20 +109,8 @@ export default function Home() {
             </p>
             <p>※ご応募いただいた書類はご返却できませんのでご了承願います。</p>
           </article>
-          <article className={styles.innerFoot}>
-            <p>
-              〔エントリー書類はこちらから〕履歴書・職務経歴書（ダウンロード）
-            </p>
-            <a
-              href="/data/resume2023.xlsx"
-              data-download-mode="DownloadLinks"
-              className={styles.linkDl}
-              target="_blank"
-            >
-              エントリーシート
-            </a>
-          </article>
         </section>
+        <ContainerEntrySheet className={entrySheetStyles.bgBlue} />
       </main>
       <Footer />
     </>

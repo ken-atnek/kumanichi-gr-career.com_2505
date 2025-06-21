@@ -1,6 +1,7 @@
 @use "variable" as *;
 @use "svg" as *;
 .containerNews,
+.containerBlog,
 .containerAbout,
 .containerMap,
 .containerGroup,
@@ -38,6 +39,11 @@
     }
 }
 .containerNews {
+    padding: 8em 2em 0;
+}
+
+.containerBlog {
+    padding-top: 0;
     padding-bottom: 3em;
     .linkBlog {
         font-size: FZ(12);

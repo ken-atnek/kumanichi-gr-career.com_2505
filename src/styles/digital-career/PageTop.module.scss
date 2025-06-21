@@ -1,0 +1,63 @@
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+// このファイル全体のルールを無効にする
+/* =================================
+** 熊日デジタル TOP
+------------------------------ */
+.containerNews,
+.containerAbout,
+.containerMap,
+.containerGroup,
+.containerFlow,
+.containerFaq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 2em;
+    background-color: #fff;
+    z-index: 5;
+    @include sp {
+        padding: 8vw 4vw;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        h2 {
+            font-size: FZ(30);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-bottom: 1px solid rgb(35 35 35 / 15%);
+            padding-bottom: 0.5em;
+            margin-left: 1em;
+            margin-bottom: 2em;
+            @include sp {
+                margin-left: unset;
+                border-bottom: unset;
+                padding-bottom: unset;
+                font-size: FZ(24);
+                margin-bottom: 6vw;
+            }
+        }
+    }
+}
+.containerNews {
+    padding-bottom: 3em;
+    .linkBlog {
+        font-size: FZ(12);
+        align-self: center;
+        border: 3px solid $base-blue;
+        color: $base-blue;
+        padding: 1.4em 4em;
+        border-radius: 100vmax;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+        margin-top: 2em;
+        transition: 0.3s ease-out;
+        @include hover {
+            background-color: $base-blue;
+            color: #fff;
+        }
+    }
+}

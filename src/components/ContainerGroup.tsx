@@ -6,7 +6,6 @@
  * Last updated: 2025-05-16
  * ======================================= */
 import { useMemo } from 'react';
-
 import Image from 'next/image';
 import GroupImage01 from '@/assets/images/group/group01.webp';
 import GroupImage02 from '@/assets/images/group/group02.webp';
@@ -14,6 +13,7 @@ import GroupImage03 from '@/assets/images/group/group03.webp';
 import GroupImage04 from '@/assets/images/group/group04.webp';
 import GroupImage05 from '@/assets/images/group/group05.webp';
 import styles from '@/styles/components/ContainerGroup.module.scss';
+import Link from 'next/link';
 
 const ContainerGroup = () => {
   const ListData = useMemo(
@@ -61,7 +61,7 @@ const ContainerGroup = () => {
         description:
           '２０２２年１０月にスタートした熊日グループ初のデジタル専門会社。WEBサイト制作やウェブ広告配信のほか、動画制作・配信を手掛ける、今後ますます高まるデジタル市場で熊本の発展に貢献していく。',
         target: 'Group05',
-        url: 'https://www.kumanichi-digital-career.com/',
+        url: '/digital-career/',
       },
     ],
     []
@@ -76,9 +76,9 @@ const ContainerGroup = () => {
           <div className={styles.boxDetails}>
             <h3>{item.title}</h3>
             <div className={styles.description}>{item.description}</div>
-            <a href={item.url} target="_blank">
+            <Link href={item.url}>
               <span>採用サイトへ</span>
-            </a>
+            </Link>
           </div>
         </li>
       ))}

@@ -39,11 +39,26 @@
                 color: $base-blue;
             }
         }
+        .digitalH1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: inherit;
+            gap: 1em 0;
+            img {
+                max-width: 25rem;
+            }
+            p {
+                font-size: FZ(12);
+            }
+        }
         nav {
             position: relative;
             font-size: inherit;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: flex-end;
             gap: 2em;
             .itemLink {
                 font-size: FZ(14);
@@ -73,6 +88,10 @@
                     opacity: 1;
                 }
             }
+        }
+        &.digital {
+            padding-top: 1em;
+            padding-bottom: 1em;
         }
     }
     &.isActive {

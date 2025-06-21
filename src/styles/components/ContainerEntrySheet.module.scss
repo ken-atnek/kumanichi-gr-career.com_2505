@@ -1,0 +1,51 @@
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+// このファイル全体のルールを無効にする
+/* =================================
+** エントリーシート
+------------------------------ */
+.containerEntrySheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 2em;
+    gap: 0.8em 0;
+    @include sp {
+        padding: 4vw;
+    }
+    p {
+        font-size: FZ(14);
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.04em;
+        @include sp {
+            font-size: FZ(12);
+        }
+    }
+    .linkDl {
+        font-size: inherit;
+        span {
+            font-weight: 700;
+            font-size: FZ(26);
+            margin-top: 0.8em;
+            letter-spacing: 0.08em;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+                left: calc(100% + 0.5em);
+                width: 1em;
+                @include svg-icon-download("232323");
+            }
+        }
+    }
+    &.bgBlue {
+        background-color: $base-blue;
+    }
+    &.bgRed {
+        background-color: red;
+    }
+}

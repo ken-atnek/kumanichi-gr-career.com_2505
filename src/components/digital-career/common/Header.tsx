@@ -91,7 +91,7 @@ const Header = () => {
             TOP
           </Link>
           <Link
-            href="/#ContainerNews"
+            href="/digital-career/#DigitalContainerNews"
             className={styles.itemLink}
             onClick={closeMenu}
           >

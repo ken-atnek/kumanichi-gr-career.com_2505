@@ -96,7 +96,7 @@
         position: relative;
         font-size: inherit;
         display: grid;
-        grid-row: span 5;
+        grid-row: span 6;
         grid-template-rows: subgrid;
         gap: 0;
         margin-bottom: 2em;
@@ -118,7 +118,7 @@
             object-fit: cover;
         }
         .wrapContents {
-            grid-row: span 4;
+            grid-row: span 5;
             display: grid;
             grid-template-rows: subgrid;
             font-size: inherit;
@@ -151,6 +151,10 @@
                 border-top-left-radius: 3px;
                 font-size: 1rem;
                 letter-spacing: 0.2em;
+                margin-top: 1em;
+            }
+            .itemDate {
+                font-size: FZ(12);
                 margin-top: 1em;
             }
         }

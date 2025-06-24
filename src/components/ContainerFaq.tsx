@@ -8,8 +8,8 @@
 'use client';
 
 import { useMemo } from 'react';
-import styles from '@/styles/components//ContainerFaq.module.scss';
 import { useState, useRef } from 'react';
+import styles from '@/styles/components//ContainerFaq.module.scss';
 const ContainerFaq = () => {
   const listData = useMemo(
     () => [

@@ -12,5 +12,6 @@ export type BlogItem = {
   };
     body: {
     content: ReactNode;
+    thumb: StaticImageData;
   };
 };

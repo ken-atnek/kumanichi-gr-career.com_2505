@@ -29,6 +29,12 @@ $articleMaxWidth: 117rem;
 /* =================================
  * フォント設定
  * ------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap");
+
+@mixin ZillaSlab {
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+}
 
 /* フォント設定 */
 @mixin SunSerif {
@@ -60,6 +66,7 @@ $articleMaxWidth: 117rem;
 $base-white: #e3e4eb;
 $base-black: #232323;
 $base-blue: #1ba0fb;
+$base-red: #df0000;
 $dark-blue: #0842af;
 
 /* =================================

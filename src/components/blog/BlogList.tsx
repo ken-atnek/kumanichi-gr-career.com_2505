@@ -36,6 +36,7 @@ const BlogList = ({ items, isTopPage }: Props) => {
             <span className={styles.category}>
               {item.category.child ?? item.category.parent}
             </span>
+            <div className={styles.itemDate}>{item.date}</div>
           </div>
         </li>
       ))}

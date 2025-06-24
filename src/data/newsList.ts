@@ -14,6 +14,12 @@ export type NewsItem = {
 
 export const newsList: NewsItem[] = [
   {
+    id: 'n003',
+    date: '2025.06.23',
+    company: '熊日デジタル',
+    title: '採用サイトを公開しました',
+  },
+  {
     id: 'n002',
     date: '2025.06.21',
     company: '熊日グループ',

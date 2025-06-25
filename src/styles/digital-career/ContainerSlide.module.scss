@@ -14,17 +14,22 @@
     justify-content: center;
     @include sp {
         height: 120vw;
+        overflow: unset;
     }
 
     article {
         height: 100%;
-        padding: 3em;
+        padding: 8em;
         display: flex;
         justify-content: flex-end;
         color: #fff;
         flex-direction: column;
+        z-index: 10;
+        align-items: flex-start;
         @include sp {
-            padding: 20vw 4vw;
+            height: 122vw;
+            width: 100%;
+            padding: 4vw;
         }
         h2 {
             font-size: FZ(36);
@@ -32,16 +37,26 @@
             letter-spacing: 0.2em;
             line-height: 2em;
             @include sp {
-                font-size: FZ(20);
+                font-size: FZ(24);
+                color: #fff;
+                padding-inline: 0.2em;
+                background-color: $base-black;
+                margin-bottom: 0.4em;
             }
         }
         p {
-            font-size: FZ(20);
-            font-weight: 700;
+            font-size: FZ(16);
+            font-weight: 500;
             letter-spacing: 0.12em;
-            margin-top: 1em;
+            margin-top: 0.3em;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 0.2em;
             @include sp {
-                font-size: FZ(16);
+                font-size: FZ(14);
+                padding: unset;
+                text-align: justify;
+                background-color: transparent;
+                color: $base-black;
             }
         }
     }
@@ -58,6 +73,9 @@
     transition: opacity 1.5s ease-in-out;
     z-index: 1;
     opacity: 1;
+    @include sp {
+        height: 80vw;
+    }
     &.Image01Active {
         opacity: 1;
         z-index: 2;

@@ -33,6 +33,10 @@
             flex-direction: column;
             margin-bottom: 4em;
             gap: 1em 0;
+            @include sp {
+                gap: 2vw 0;
+                margin-bottom: 6vw;
+            }
             h2 {
                 @include ZillaSlab;
                 padding: 0.1em 0.1em;
@@ -49,12 +53,18 @@
                 padding-top: 1.6em;
                 color: #333;
                 letter-spacing: 0.04em;
+                @include sp {
+                    padding-top: 2vw;
+                }
             }
         }
     }
 }
 .containerNews {
     padding: 8em 2em 0;
+    @include sp {
+        padding: 10vw 4vw;
+    }
 }
 
 .containerBlog {
@@ -81,6 +91,9 @@
 }
 .containerAbout {
     padding-bottom: 3em;
+    @include sp {
+        padding-bottom: 2vw;
+    }
     .listAbout {
         position: relative;
         display: flex;
@@ -92,6 +105,13 @@
             display: flex;
             padding: 5em 5em;
             gap: 0 4em;
+            @include sp {
+                padding: 0;
+                flex-direction: column-reverse;
+                padding-top: 8vw;
+                padding-bottom: 8vw;
+                gap: 4vw 0;
+            }
             &::after {
                 content: "";
                 top: 1em;
@@ -100,6 +120,10 @@
             .wrapImage {
                 position: relative;
                 width: 40%;
+                @include sp {
+                    width: 75vw;
+                    margin-inline: auto;
+                }
                 img {
                     position: relative;
                     width: 100%;
@@ -122,6 +146,9 @@
                 flex-direction: column;
                 position: relative;
                 gap: 2em 0;
+                @include sp {
+                    gap: 6vw 0;
+                }
                 h3 {
                     font-size: FZ(24);
                     letter-spacing: 0.04em;
@@ -140,16 +167,25 @@
                     background: url(../../assets/images/digital-career/about/number01.webp)
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
+                    @include sp {
+                        width: 60vw;
+                    }
                 }
             }
             &:nth-of-type(2n) {
                 flex-direction: row-reverse;
+                @include sp {
+                    flex-direction: column-reverse;
+                }
                 &::after {
                     left: 0;
                     width: 20em;
                     background: url(../../assets/images/digital-career/about/number02.webp)
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
+                    @include sp {
+                        width: 60vw;
+                    }
                 }
                 &::before {
                     content: "";
@@ -170,6 +206,9 @@
                     background: url(../../assets/images/digital-career/about/number03.webp)
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
+                    @include sp {
+                        width: 60vw;
+                    }
                 }
             }
         }
@@ -177,11 +216,18 @@
 }
 .containerGreeting {
     padding-top: 3em;
+    @include sp {
+        padding-top: 4vw;
+    }
     .wrapContents {
         position: relative;
         font-size: inherit;
         display: flex;
         gap: 0 3em;
+        @include sp {
+            flex-direction: column;
+            gap: 4vw 0;
+        }
         p {
             flex: 1;
             font-size: FZ(16);
@@ -197,6 +243,9 @@
             flex-direction: column;
             align-items: center;
             width: 40%;
+            @include sp {
+                width: 100%;
+            }
             figcaption {
                 font-size: FZ(16);
                 margin-top: 1.4em;
@@ -234,9 +283,17 @@
             padding-block: 3em;
             font-size: inherit;
             gap: 0 3em;
+            @include sp {
+                flex-direction: column;
+                padding-block: 4vw;
+                gap: 4vw 0;
+            }
             .imageWrapper {
                 position: relative;
                 width: 40%;
+                @include sp {
+                    width: 100%;
+                }
             }
             .textWrapper {
                 flex: 1;
@@ -268,6 +325,9 @@
             }
             &:nth-of-type(2n) {
                 flex-direction: row-reverse;
+                @include sp {
+                    flex-direction: column;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -288,6 +348,9 @@
     flex-direction: column;
     align-items: center;
     padding-block: 2em;
+    @include sp {
+        padding-top: 4vw;
+    }
     h2 {
         width: 100%;
         color: #333;
@@ -295,6 +358,9 @@
         font-size: FZ(24);
         letter-spacing: 0.6em;
         max-width: $articleMaxWidth;
+        @include sp {
+            padding-left: 4vw;
+        }
     }
     .blockSlide {
         overflow: hidden;
@@ -310,6 +376,9 @@
         .slideItem {
             flex: 0 0 auto;
             width: 1000px; // 画像幅に合わせて調整
+            @include sp {
+                width: 120vw;
+            }
             img {
                 display: block;
                 width: 100%;
@@ -337,6 +406,9 @@
         font-size: inherit;
         grid-template-columns: auto 1fr;
         gap: 3em 0;
+        @include sp {
+            gap: 4vw 0;
+        }
         dl {
             position: relative;
             font-size: inherit;
@@ -348,6 +420,10 @@
                 background-color: rgba(240, 235, 233, 0.4);
                 font-size: FZ(16);
                 padding: 2.6em 2em;
+                @include sp {
+                    grid-column: span 2;
+                    padding: 4vw;
+                }
             }
             dd {
                 font-size: FZ(14);
@@ -359,6 +435,10 @@
                 line-height: 1.8em;
                 text-align: justify;
                 gap: 0.5em 0;
+                @include sp {
+                    grid-column: span 2;
+                    padding: 4vw;
+                }
                 ul {
                     font-size: inherit;
                     display: flex;
@@ -389,6 +469,9 @@
                     letter-spacing: 0.08em;
                     line-height: 1.8em;
                     margin-bottom: 1em;
+                    @include sp {
+                        text-align: left;
+                    }
                     a {
                         font-size: inherit;
                         font-weight: 600;
@@ -404,6 +487,9 @@
 .containerMovie {
     gap: 2em 0;
     padding-top: 2em;
+    @include sp {
+        gap: 4vw 0;
+    }
     h2 {
         font-size: FZ(20);
     }
@@ -424,11 +510,20 @@
         margin-top: 2em;
         max-width: $articleMaxWidth;
         font-size: inherit;
+        @include sp {
+            grid-template-columns: unset;
+            grid-auto-flow: row;
+            gap: 4vw 0;
+            margin-top: 0;
+        }
         iframe {
             width: 100%;
             margin-inline: auto;
             max-width: 64rem;
             aspect-ratio: 16/9;
+            @include sp {
+                max-width: unset;
+            }
         }
     }
     .itemLink {

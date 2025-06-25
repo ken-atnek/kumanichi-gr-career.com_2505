@@ -38,6 +38,11 @@ const ContainerSlide = () => {
           backgroundImage: `url(${slideImages[1]})`,
         }}
       />
+      <article>
+        <h2>デジタルで、地域の未来を描く。</h2>
+        <p>熊本日日新聞社が掲げる「地域主義」を新会社でも念頭に置き</p>
+        <p>多様なデジタルサービスを通じて地域が豊かになるお手伝いを。</p>
+      </article>
     </section>
   );
 };

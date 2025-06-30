@@ -62,7 +62,7 @@ export default function Home() {
               .slice(0, 3)}
             isTopPage
           />
-          <Link href="/blog/" className={styles.linkBlog}>
+          <Link href="/digital-career/blog/" className={styles.linkBlog}>
             すべてを見る
           </Link>
         </article>

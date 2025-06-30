@@ -1,10 +1,6 @@
 @use "variable" as *;
 @use "svg" as *;
 /* stylelint-disable no-descending-specificity */
-// このファイル全体のルールを無効にする
-/* =================================
-** 熊日デジタル スライド
------------------------------- */
 
 .containerSlide {
     position: relative;
@@ -12,6 +8,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    margin-top: 7rem;
     @include sp {
         height: 120vw;
         overflow: unset;
@@ -31,11 +28,12 @@
             width: 100%;
             padding: 4vw;
         }
+
         h2 {
-            font-size: FZ(36);
+            font-size: FZ(30);
             font-weight: 700;
-            letter-spacing: 0.2em;
-            line-height: 2em;
+            letter-spacing: 0.12em;
+            line-height: 1.6em;
             @include sp {
                 font-size: FZ(24);
                 color: #fff;
@@ -44,6 +42,7 @@
                 margin-bottom: 0.4em;
             }
         }
+
         p {
             font-size: FZ(16);
             font-weight: 500;
@@ -70,9 +69,9 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    // background-position: center bottom;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     @include sp {
         height: 80vw;
     }
@@ -81,13 +80,13 @@
 .slideImagePrev {
     z-index: 1;
     opacity: 1;
-    animation: slideOut 8s forwards;
+    animation: slideOut 5s forwards;
 }
 
 .slideImageNext {
     z-index: 2;
     opacity: 0;
-    animation: slideIn 8s forwards;
+    animation: slideIn 5s forwards;
 }
 
 @keyframes slideOut {
@@ -105,6 +104,9 @@
     0% {
         opacity: 0;
         background-position: center bottom;
+    }
+    20% {
+        opacity: 1;
     }
     100% {
         opacity: 1;

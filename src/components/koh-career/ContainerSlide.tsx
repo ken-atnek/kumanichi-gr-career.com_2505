@@ -1,17 +1,19 @@
 /* =======================================
- * 熊日デジタル スライド
- * URL:src/components/digital-career/ContainerSlide.tsx
+ * 熊日広告社 スライド
+ * URL:src/components/koh-career/ContainerSlide.tsx
  * Referenced in: src/app/page.tsx
- * Created: 2025-05-15
- * Last updated: 2025-05-15
+ * Created: 2025-06-27
+ * Last updated: 2025-06-27
  * ======================================= */
 'use client';
+
 import { useEffect, useState } from 'react';
-import styles from '@/styles/digital-career/ContainerSlide.module.scss';
+import styles from '@/styles/koh-career/ContainerSlide.module.scss';
 
 const slideImages = [
-  '/images/slide/digital-career/slide01.webp',
-  '/images/slide/digital-career/slide02.webp',
+  '/images/slide/koh-career/slide01.webp',
+  '/images/slide/koh-career/slide02.webp',
+  '/images/slide/koh-career/slide03.webp',
 ];
 
 const ContainerSlide = () => {
@@ -37,13 +39,21 @@ const ContainerSlide = () => {
       />
       <div
         key={`next-${animationKey}`}
-        className={`${styles.slideImage} ${styles.slideImageNext}`}
+        className={`${styles.slideImage} ${styles.slideImageNext} ${activeIndex === 1 || activeIndex === 2 ? styles.isZoom : ''}`}
         style={{ backgroundImage: `url(${slideImages[activeIndex]})` }}
       />
       <article>
-        <h2>デジタルで、地域の未来を描く。</h2>
-        <p>熊本日日新聞社が掲げる「地域主義」を新会社でも念頭に置き</p>
-        <p>多様なデジタルサービスを通じて地域が豊かになるお手伝いを。</p>
+        <h2>
+          くまもとの思いを正しく、
+          <br />
+          多くの地域の人たちに代弁できる広告会社であり続けたい。
+        </h2>
+        <p>
+          次の新しい時代を見据えながら、持続可能な「ふるさと熊本」の地域社会発展のために、
+        </p>
+        <p>
+          広告業務を通して微力ながらその一翼を担うことを使命と考えています。
+        </p>
       </article>
     </section>
   );

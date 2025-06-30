@@ -1,17 +1,17 @@
 /* =======================================
- * 熊日デジタル スライド
- * URL:src/components/digital-career/ContainerSlide.tsx
+ * 熊日サービス開発 スライド
+ * URL:src/components/sv-career/ContainerSlide.tsx
  * Referenced in: src/app/page.tsx
- * Created: 2025-05-15
- * Last updated: 2025-05-15
+ * Created: 2025-06-30
+ * Last updated: 2025-06-30
  * ======================================= */
 'use client';
 import { useEffect, useState } from 'react';
-import styles from '@/styles/digital-career/ContainerSlide.module.scss';
+import styles from '@/styles/sv-career/ContainerSlide.module.scss';
 
 const slideImages = [
-  '/images/slide/digital-career/slide01.webp',
-  '/images/slide/digital-career/slide02.webp',
+  '/images/slide/sv-career/slide01.webp',
+  '/images/slide/sv-career/slide02.webp',
 ];
 
 const ContainerSlide = () => {
@@ -41,9 +41,9 @@ const ContainerSlide = () => {
         style={{ backgroundImage: `url(${slideImages[activeIndex]})` }}
       />
       <article>
-        <h2>デジタルで、地域の未来を描く。</h2>
-        <p>熊本日日新聞社が掲げる「地域主義」を新会社でも念頭に置き</p>
-        <p>多様なデジタルサービスを通じて地域が豊かになるお手伝いを。</p>
+        <h2>地域の皆様に「発見！」を。</h2>
+        <p>各種イベント開催、カルチャーセンター運営、</p>
+        <p>出版、印刷物制作など、幅広い業務で地域に貢献します</p>
       </article>
     </section>
   );

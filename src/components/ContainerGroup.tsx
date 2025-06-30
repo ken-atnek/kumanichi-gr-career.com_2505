@@ -3,7 +3,7 @@
  * URL: src/components/ContainerGroup.tsx
  * Referenced in: src/app/page.tsx
  * Created: 2025-05-16
- * Last updated: 2025-05-16
+ * Last updated: 2025-06-30
  * ======================================= */
 import { useMemo } from 'react';
 import Image from 'next/image';
@@ -52,7 +52,7 @@ const ContainerGroup = () => {
         title: '株式会社熊日会館',
         description:
           '2002年に開業し、熊本の新聞発祥の地でもある「びぷれす熊日会館」の各施設を運営する管理会社。テナントには鶴屋NEW‐Sやホテル日航熊本がある。ビルの空調や防火管理、建物の営繕関係を中心とした業務のほかにびぷれす広場や地下駐車場の運営管理も行う。熊本市中心市街地の活性化や情報発信の拠点としての役割を果たしている。',
-        url: 'https://www.kumanichi-bipuresu-career.com/',
+        url: '/bipuresu-career/',
         target: 'Group04',
       },
       {

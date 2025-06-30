@@ -1,6 +1,6 @@
 /* =======================================
- * 熊日サービス開発  FOOTER
- * URL: src/components/sv-career/common/Footer.tsx
+ * 熊日会館 FOOTER
+ * URL: src/components/bipuresu-career/common/Footer.tsx
  * Created: 2025-06-30
  * Last updated: 2025-06-30
  * ======================================= */
@@ -34,7 +34,7 @@ const Footer = () => {
           </Link>
         </nav>
         <div className={styles.copyright}>
-          Copyright KUMANICHI SERVICE KAIHATSU All Rights Reserved.
+          Copyright KUMANICHI KAIKAN All Rights Reserved.
         </div>
       </article>
     </footer>

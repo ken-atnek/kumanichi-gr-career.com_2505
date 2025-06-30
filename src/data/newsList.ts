@@ -8,7 +8,12 @@
 export type NewsItem = {
   id: string;
   date: string;
-  company: '熊日グループ' | '熊日' | '熊日デジタル' | '熊日広告社' | '熊日サービス開発';
+  company:
+    | '熊日グループ'
+    | '熊日会館'
+    | '熊日デジタル'
+    | '熊日広告社'
+    | '熊日サービス開発';
   title: string;
 };
 

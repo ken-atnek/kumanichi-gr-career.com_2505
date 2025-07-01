@@ -1,15 +1,15 @@
 /* =======================================
- *熊日サービス開発  よくある質問
- * URL:src/components/sv-career/ContainerQuestions.tsx
- * Referenced in: src/app/sv-career/page.tsx
- * Created: 2025-06-24
- * Last updated: 2025-06-24
+ * 熊日メディアコム  よくある質問
+ * URL:src/components/yusou-career/ContainerQuestions.tsx
+ * Referenced in: src/app/yusou-career/page.tsx
+ * Created: 2025-07-01
+ * Last updated: 2025-07-01
  * ======================================= */
 'use client';
 
 import { useMemo } from 'react';
 import { useState, useRef } from 'react';
-import styles from '@/styles/sv-career/PageTop.module.scss';
+import styles from '@/styles/yusou-career/PageTop.module.scss';
 import Link from 'next/link';
 
 const ContainerQuestions = () => {

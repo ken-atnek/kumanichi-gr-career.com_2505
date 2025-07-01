@@ -45,7 +45,7 @@ const ContainerGroup = () => {
           </>
         ),
         target: 'Group03',
-        url: 'https://www.kumanichi-yusou-career.com/',
+        url: '/yusou-career/',
       },
       {
         image: GroupImage04,

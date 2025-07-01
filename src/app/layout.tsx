@@ -9,7 +9,7 @@ import type { Metadata } from 'next';
 import '@/styles/globals.scss';
 import { Noto_Sans_JP } from 'next/font/google';
 import { Jost } from 'next/font/google';
-
+import { Zilla_Slab } from 'next/font/google';
 
 const notoSans = Noto_Sans_JP({
   subsets: ['latin'],
@@ -20,6 +20,11 @@ const jost = Jost({
   subsets: ['latin'], // 必要に応じて 'latin-ext' など追加
   weight: ['400', '500', '700'], // 必要なウェイトだけ指定
   display: 'swap', // 推奨
+});
+const zillaSlab = Zilla_Slab({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
 });
 // 実際の本番環境かどうかを判定
 const isRealProduction = process.env.NEXT_PUBLIC_IS_REAL_PROD === 'true';
@@ -69,7 +74,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSans.className} ${jost.className}`}>
+    <html
+      lang="ja"
+      className={`${notoSans.className} ${jost.className} ${zillaSlab.className}`}
+    >
       <head>
         <meta
           name="robots"

@@ -1,7 +1,8 @@
 @use "variable" as *;
 @use "svg" as *;
 /* stylelint-disable no-descending-specificity */
-// このファイル全体のルールを無効にする
+/* stylelint-disable keyframes-name-pattern */
+
 /* =================================
 ** 熊日デジタル TOP
 ------------------------------ */
@@ -39,7 +40,7 @@
             }
             h2 {
                 @include ZillaSlab;
-                padding: 0.1em 0.1em;
+                padding: 0.1em;
                 font-size: FZ(28);
                 color: #fff;
                 background-color: $base-red;
@@ -66,7 +67,6 @@
         padding: 10vw 4vw;
     }
 }
-
 .containerBlog {
     padding-top: 2em;
     padding-bottom: 3em;
@@ -103,7 +103,7 @@
             position: relative;
             font-size: inherit;
             display: flex;
-            padding: 5em 5em;
+            padding: 5em;
             gap: 0 4em;
             @include sp {
                 padding: 0;
@@ -134,7 +134,7 @@
                     content: "";
                     position: absolute;
                     inset: 0;
-                    background-color: #333333;
+                    background-color: #333;
                     translate: 2em 2em;
                     z-index: -1;
                 }
@@ -164,7 +164,7 @@
                 &::after {
                     right: 0;
                     width: 20em;
-                    background: url(../../assets/images/digital-career/about/number01.webp)
+                    background: url("../../assets/images/digital-career/about/number01.webp")
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
                     @include sp {
@@ -180,7 +180,7 @@
                 &::after {
                     left: 0;
                     width: 20em;
-                    background: url(../../assets/images/digital-career/about/number02.webp)
+                    background: url("../../assets/images/digital-career/about/number02.webp")
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
                     @include sp {
@@ -203,7 +203,7 @@
                 &::after {
                     right: 0;
                     width: 20em;
-                    background: url(../../assets/images/digital-career/about/number03.webp)
+                    background: url("../../assets/images/digital-career/about/number03.webp")
                         no-repeat center center/contain;
                     aspect-ratio: 296/238;
                     @include sp {
@@ -259,8 +259,8 @@
     &::after {
         content: "";
         position: absolute;
-        background: url(../../assets/images/digital-career/mark.webp) no-repeat
-            center center / contain;
+        background: url("../../assets/images/digital-career/mark.webp")
+            no-repeat center center / contain;
         aspect-ratio: 296/238;
         width: 18em;
     }
@@ -336,7 +336,7 @@
                     left: 50%;
                     translate: -50%;
                     width: 100vw;
-                    background-color: #ffffff;
+                    background-color: #fff;
                     z-index: -1;
                 }
             }
@@ -372,7 +372,6 @@
             width: max-content;
             animation: scrollSlide 60s linear infinite;
         }
-
         .slideItem {
             flex: 0 0 auto;
             width: 1000px; // 画像幅に合わせて調整
@@ -399,7 +398,6 @@
 }
 .containerJobDescription {
     padding-bottom: 2em;
-
     .boxJobDescription {
         position: relative;
         display: grid;
@@ -417,7 +415,7 @@
             grid-template-columns: subgrid;
             border-bottom: 1px solid #f0ebe9;
             dt {
-                background-color: rgba(240, 235, 233, 0.4);
+                background-color: rgb(240 235 233 / 40%);
                 font-size: FZ(16);
                 padding: 2.6em 2em;
                 @include sp {
@@ -556,7 +554,6 @@
             font-weight: 500;
             letter-spacing: 0.04em;
             transition: 0.3s ease-out;
-
             &::after {
                 content: "";
                 position: absolute;
@@ -594,7 +591,7 @@
         width: 100%;
         gap: 2px 0;
         li {
-            background-color: rgba(51, 51, 51, 0.1);
+            background-color: rgb(51 51 51 / 10%);
             display: flex;
             flex-direction: column;
             font-size: inherit;
@@ -613,7 +610,7 @@
                     background-color: #855740;
                 }
                 &.closed {
-                    background-color: #333333;
+                    background-color: #333;
                 }
                 @include hover {
                     background-color: #855740;
@@ -639,7 +636,7 @@
                     }
                     em {
                         font-size: 1.25em;
-                        background-color: rgba(171, 163, 255, 0.3);
+                        background-color: rgb(171 163 255 / 30%);
                         align-self: flex-start;
                         padding: 0.2em;
                     }

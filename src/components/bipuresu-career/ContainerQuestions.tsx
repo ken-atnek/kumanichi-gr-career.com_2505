@@ -10,7 +10,6 @@
 import { useMemo } from 'react';
 import { useState, useRef } from 'react';
 import styles from '@/styles/sv-career/PageTop.module.scss';
-import Link from 'next/link';
 
 const ContainerQuestions = () => {
   const listData = useMemo(

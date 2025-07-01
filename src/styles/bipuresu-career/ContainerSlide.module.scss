@@ -1,7 +1,7 @@
 @use "variable" as *;
 @use "svg" as *;
 /* stylelint-disable no-descending-specificity */
-
+/* stylelint-disable keyframes-name-pattern */
 .containerSlide {
     position: relative;
     height: 80rem;
@@ -46,7 +46,7 @@
             font-weight: 500;
             letter-spacing: 0.12em;
             margin-top: 0.3em;
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: rgb(0 0 0 / 20%);
             padding: 0.2em;
             @include sp {
                 font-size: FZ(14);

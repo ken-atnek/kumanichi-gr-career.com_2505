@@ -2,6 +2,7 @@
 @use "svg" as *;
 /* stylelint-disable no-descending-specificity */
 // このファイル全体のルールを無効にする
+
 /* =================================
 ** 一覧ページ
 ------------------------------ */
@@ -74,14 +75,12 @@
     align-items: center;
     padding: 2em 0;
     background-color: #f2f2f2;
-
     article {
         display: flex;
         max-width: $articleMaxWidth;
         flex-direction: column;
     }
 }
-
 .blogList {
     position: relative;
     font-size: inherit;
@@ -232,21 +231,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em 2em;
+    padding: 2em;
     article {
         display: flex;
         flex-direction: column;
         align-items: center;
         max-width: $articleMaxWidth;
-        border-bottom: solid 1px rgba(35, 35, 35, 0.5);
-
+        border-bottom: solid 1px rgb(35 35 35 / 50%);
         .thumb {
             width: 100%;
         }
         .wrapHead {
             width: 100%;
             font-size: inherit;
-            border-bottom: solid 1px rgba(35, 35, 35, 0.5);
+            border-bottom: solid 1px rgb(35 35 35 / 50%);
             padding: 1em 0 1.4em;
             display: flex;
             align-items: center;
@@ -255,7 +253,7 @@
                 font-size: FZ(14);
             }
             .category {
-                border: solid 1px rgba(35, 35, 35, 0.5);
+                border: solid 1px rgb(35 35 35 / 50%);
                 padding: 0.5em 1em;
                 font-size: FZ(12);
             }

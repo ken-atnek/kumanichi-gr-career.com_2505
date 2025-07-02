@@ -1,0 +1,108 @@
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+.containerSlide {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    @include sp {
+        height: 120vw;
+        overflow: unset;
+    }
+    article {
+        height: 100%;
+        padding: 8em;
+        display: flex;
+        justify-content: flex-end;
+        color: #fff;
+        flex-direction: column;
+        z-index: 10;
+        align-items: flex-start;
+        @include sp {
+            height: 122vw;
+            width: 100%;
+            padding: 4vw;
+        }
+        h2 {
+            font-size: FZ(30);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            line-height: 1.6em;
+            @include sp {
+                font-size: FZ(24);
+                color: #fff;
+                padding-inline: 0.2em;
+                background-color: $base-black;
+                margin-bottom: 0.4em;
+            }
+        }
+        p {
+            font-size: FZ(16);
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            margin-top: 0.3em;
+            background-color: rgb(0 0 0 / 20%);
+            padding: 0.2em;
+            @include sp {
+                font-size: FZ(14);
+                padding: unset;
+                text-align: justify;
+                background-color: transparent;
+                color: $base-black;
+            }
+        }
+    }
+}
+.slideImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // background-position: center bottom;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    @include sp {
+        height: 80vw;
+    }
+}
+.slideImagePrev {
+    z-index: 1;
+    opacity: 1;
+    animation: slideOut 5s forwards;
+}
+.slideImageNext {
+    z-index: 2;
+    opacity: 0;
+    animation: slideIn 5s forwards;
+}
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        background-position: center center;
+    }
+    100% {
+        opacity: 0;
+        background-position: center top;
+    }
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        background-position: center bottom;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        background-position: center center;
+    }
+}

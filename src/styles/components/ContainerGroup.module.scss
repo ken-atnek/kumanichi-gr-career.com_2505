@@ -1,0 +1,134 @@
+@use "variable" as *;
+@use "svg" as *;
+.listGroup {
+    position: relative;
+    width: 100%;
+    max-width: $articleMaxWidth;
+    display: flex;
+    flex-direction: column;
+    gap: 8em 0;
+    font-size: inherit;
+    padding-top: 5em;
+    padding-bottom: 8em;
+    @include sp {
+        gap: 14vw 0;
+        padding-top: unset;
+        padding-bottom: unset;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+        width: 100vw;
+        z-index: -1;
+        @include sp {
+            display: none;
+        }
+    }
+    &::before {
+        background-color: #e3e4eb;
+        top: 0;
+        height: 70rem;
+    }
+    &::after {
+        height: 57rem;
+        bottom: 0;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(#e3e4eb, 1),
+            rgba(#fff, 1)
+        );
+    }
+    li {
+        position: relative;
+        display: flex;
+        font-size: inherit;
+        @include sp {
+            flex-direction: column;
+        }
+        .boxImage {
+            position: relative;
+            flex: 1;
+            max-width: 78rem;
+            img {
+                aspect-ratio: 1.666;
+                object-fit: cover;
+            }
+        }
+        .boxDetails {
+            position: relative;
+            font-size: inherit;
+            max-width: 39rem;
+            background-color: #5c5d61;
+            color: #fff;
+            padding: 4em;
+            display: flex;
+            flex-direction: column;
+            gap: 2em 0;
+            translate: 0 3em;
+            @include sp {
+                translate: unset;
+                padding: 6vw 4vw;
+            }
+            h3 {
+                font-size: FZ(20);
+                font-weight: 700;
+                font-style: italic;
+                letter-spacing: 0.08em;
+            }
+            .description {
+                font-size: FZ(13);
+                text-align: justify;
+                line-height: 1.8em;
+            }
+            a {
+                width: 20rem;
+                height: 5.4rem;
+                display: grid;
+                place-content: center;
+                border: 3px solid $base-blue;
+                color: $base-blue;
+                font-size: FZ(12);
+                border-radius: 100vmax;
+                transition: 0.3s ease-out;
+                @include sp {
+                    align-self: flex-end;
+                }
+                span {
+                    position: relative;
+                    padding-left: 1em;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        translate: 0 -50%;
+                        left: 0;
+                        width: 0.6rem;
+                        background: url("../../assets/images/arrow.webp")
+                            no-repeat center center/contain;
+                        aspect-ratio: 3/5;
+                    }
+                }
+                @include hover {
+                    border-color: #fff;
+                    color: #fff;
+                    background-color: $base-blue;
+                }
+            }
+        }
+        &:nth-of-type(2n - 1) {
+            flex-direction: row-reverse;
+            .boxDetails {
+                align-items: flex-end;
+                @include sp {
+                    align-items: flex-start;
+                }
+            }
+            @include sp {
+                flex-direction: column;
+            }
+        }
+    }
+}

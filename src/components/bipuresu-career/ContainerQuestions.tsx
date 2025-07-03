@@ -1,7 +1,7 @@
 /* =======================================
- * 熊日デジタル  よくある質問
- * URL:src/components/digital-career/ContainerQuestions.tsx
- * Referenced in: src/app/digital-career/page.tsx
+ * 熊日会館 よくある質問
+ * URL:src/components/bipuresu-career/ContainerQuestions.tsx
+ * Referenced in: src/app/bipuresu-career/page.tsx
  * Created: 2025-06-24
  * Last updated: 2025-06-24
  * ======================================= */

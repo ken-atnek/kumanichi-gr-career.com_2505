@@ -10,7 +10,10 @@ import styles from '@/styles/components/ContainerEntrySheet.module.scss';
 
 const ContainerEntrySheet = ({ className = '' }: { className?: string }) => {
   return (
-    <section className={`${styles.containerEntrySheet} ${className}`}>
+    <section
+      className={`${styles.containerEntrySheet} ${className}`}
+      id="ContainerEntrySheet"
+    >
       <p>〔エントリー書類はこちらから〕</p>
       <ExternalLink
         href="/data/resume2023.xlsx"

@@ -18,7 +18,10 @@ const ContainerJobDescription = () => {
         </div>
         <div className={styles.notice}>現在は募集を停止しております</div>
 
-        <div className={styles.boxJobDescription}>
+        <div
+          className={styles.boxJobDescription}
+          id="SvContainerJobDescription"
+        >
           <dl>
             <dt>職種</dt>
             <dd>

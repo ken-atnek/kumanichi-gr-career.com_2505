@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <ContainerSlide />
-      <section className={styles.containerNews} id="DigitalContainerNews">
+      <section className={styles.containerNews} id="SvContainerNews">
         <article>
           <div className={styles.wrapH2}>
             <h2>news</h2>
@@ -49,7 +49,7 @@ export default function Home() {
           />
         </article>
       </section>
-      <section className={styles.containerBlog} id="DigitalContainerBlog">
+      <section className={styles.containerBlog} id="SvContainerBlog">
         <article>
           <BlogList
             items={blogData
@@ -67,7 +67,7 @@ export default function Home() {
           </Link>
         </article>
       </section>
-      <section className={styles.containerAbout} id="DigitalContainerAbout">
+      <section className={styles.containerAbout} id="SvContainerAbout">
         <article>
           <div className={styles.wrapH2}>
             <h2>ABOUT</h2>
@@ -76,10 +76,7 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section
-        className={styles.containerGreeting}
-        id="DigitalContainerGreeting"
-      >
+      <section className={styles.containerGreeting} id="SvContainerGreeting">
         <article>
           <div className={styles.wrapH2}>
             <h2>GREETINGS</h2>
@@ -97,7 +94,7 @@ export default function Home() {
               </p>
             </div>
             <figure>
-              <Image src={Greeting} alt="代表取締役社長 / 岩下 勉" />
+              <Image src={Greeting} alt="代表取締役社長 / 緒方　宏則" />
               <figcaption>
                 <span>代表取締役社長</span> 緒方　宏則
               </figcaption>
@@ -105,10 +102,7 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section
-        className={styles.containerSchedule}
-        id="DigitalContainerSchedule"
-      >
+      <section className={styles.containerSchedule} id="SvContainerSchedule">
         <article>
           <div className={styles.wrapH2}>
             <h2>schedule</h2>

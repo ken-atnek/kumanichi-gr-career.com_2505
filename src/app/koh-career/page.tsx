@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <ContainerSlide />
-      <section className={styles.containerNews} id="DigitalContainerNews">
+      <section className={styles.containerNews} id="KohContainerNews">
         <article>
           <div className={styles.wrapH2}>
             <h2>news</h2>
@@ -44,7 +44,7 @@ export default function Home() {
           />
         </article>
       </section>
-      <section className={styles.containerBlog} id="DigitalContainerBlog">
+      <section className={styles.containerBlog} id="KohContainerBlog">
         <article>
           <BlogList
             items={blogData
@@ -61,7 +61,7 @@ export default function Home() {
           </Link>
         </article>
       </section>
-      <section className={styles.containerAbout} id="DigitalContainerAbout">
+      <section className={styles.containerAbout} id="KohContainerAbout">
         <article>
           <div className={styles.wrapH2}>
             <h2>ABOUT</h2>
@@ -70,10 +70,7 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section
-        className={styles.containerGreeting}
-        id="DigitalContainerGreeting"
-      >
+      <section className={styles.containerGreeting} id="KohContainerGreeting">
         <article>
           <div className={styles.wrapH2}>
             <h2>GREETINGS</h2>
@@ -99,10 +96,7 @@ export default function Home() {
           </div>
         </article>
       </section>
-      <section
-        className={styles.containerSchedule}
-        id="DigitalContainerSchedule"
-      >
+      <section className={styles.containerSchedule} id="KohContainerSchedule">
         <article>
           <div className={styles.wrapH2}>
             <h2>schedule</h2>

@@ -3,14 +3,17 @@
  * URL:src/components/digital-career/ContainerJobDescription.tsx
  * Referenced in: src/app/digital-career/page.tsx
  * Created: 2025-06-24
- * Last updated: 2025-06-24
+ * Last updated: 2025-07-02
  * ======================================= */
 import styles from '@/styles/digital-career/PageTop.module.scss';
 import ExternalLink from '@/components/common/ExternalLink';
 
 const ContainerJobDescription = () => {
   return (
-    <section className={styles.containerJobDescription}>
+    <section
+      className={styles.containerJobDescription}
+      id="DigitalContainerJobDescription"
+    >
       <article>
         <div className={styles.wrapH2}>
           <h2>JOB DESCRIPTION</h2>

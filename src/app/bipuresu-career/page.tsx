@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <ContainerSlide />
-      <section className={styles.containerNews} id="DigitalContainerNews">
+      <section className={styles.containerNews} id="BipuresuContainerNews">
         <article>
           <div className={styles.wrapH2}>
             <h2>news</h2>
@@ -46,7 +46,7 @@ export default function Home() {
           />
         </article>
       </section>
-      <section className={styles.containerBlog} id="DigitalContainerBlog">
+      <section className={styles.containerBlog} id="BipuresuContainerBlog">
         <article>
           <BlogList
             items={blogData
@@ -63,7 +63,7 @@ export default function Home() {
           </Link>
         </article>
       </section>
-      <section className={styles.containerAbout} id="DigitalContainerAbout">
+      <section className={styles.containerAbout} id="BipuresuContainerAbout">
         <article>
           <div className={styles.wrapH2}>
             <h2>ABOUT</h2>
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
       <section
         className={styles.containerGreeting}
-        id="DigitalContainerGreeting"
+        id="BipuresuContainerGreeting"
       >
         <article>
           <div className={styles.wrapH2}>
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
       <section
         className={styles.containerSchedule}
-        id="DigitalContainerSchedule"
+        id="BipuresuContainerSchedule"
       >
         <article>
           <div className={styles.wrapH2}>

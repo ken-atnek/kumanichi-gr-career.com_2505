@@ -27,10 +27,9 @@ import ContainerJobDescription from '@/components/yusou-career/ContainerJobDescr
 import ContainerQuestions from '@/components/yusou-career/ContainerQuestions';
 export const generateMetadata = (): Metadata => {
   return {
-    title:
-      '株式会社サービス開発 キャリア採用サイト｜熊本で働く、地域と生きる。',
+    title: '熊日メディアコム キャリア採用サイト｜熊本で働く、地域と生きる。',
     description:
-      '株式会社サービス開発のキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
+      '熊日メディアコムのキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
   };
 };
 export default function Home() {
@@ -65,7 +64,7 @@ export default function Home() {
               .slice(0, 3)}
             isTopPage
           />
-          <Link href="/sv-career/blog/" className={styles.linkBlog}>
+          <Link href="/yusou-career/blog/" className={styles.linkBlog}>
             すべてを見る
           </Link>
         </article>
@@ -140,6 +139,16 @@ export default function Home() {
         </article>
       </section>
       <ContainerBottomSlide />
+      <section className={styles.containerMovie}>
+        <h2>会社紹介動画</h2>
+        <div className={styles.boxHeadMovie}>
+          <iframe
+            title="熊日デジタル紹介動画"
+            src="https://www.youtube.com/embed/wqEAQ10G2A8?loop=0&autoplay=0&fs=1&rel=0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
       <ContainerJobDescription />
       <ContainerQuestions />
       <ContainerEntrySheet className={entrySheetStyles.bgRed} />

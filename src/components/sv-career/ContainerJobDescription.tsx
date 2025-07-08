@@ -74,18 +74,7 @@ const ContainerJobDescription = () => {
                   <span>▪︎賞与＝年２回（６月・12月）</span>
                   <span>▪︎年間休日数＝104日</span>
                 </li>
-                <li>
-                  <h3>待遇・福利厚生・社内制度</h3>
-                  <span>・健康保険</span>
-                  <span>・労災保険</span>
-                  <span>・雇用保険</span>
-                  <span>・厚生年金</span>
-                  <span>・産休</span>
-                  <span>・育児休業</span>
-                  <span>・退職金制度</span>
-                  <span>・資格取得支援制度</span>
-                  <span>・服装はスーツなどではなくビジネスカジュアル</span>
-                </li>
+
                 <li>
                   <h3>▪︎その他休暇</h3>
                   <span>・年次有給休暇</span>

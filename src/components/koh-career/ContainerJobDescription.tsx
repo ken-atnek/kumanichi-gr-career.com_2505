@@ -54,19 +54,14 @@ const ContainerJobDescription = () => {
               <ul>
                 <li>
                   <h3>休日休暇</h3>
-                  <span>・毎月日曜、祝日＋３７日</span>
+                  <span>・毎月日曜、祝日＋３日</span>
                   <span>・有給休暇</span>
                   <span>・夏季休暇（連続４日）</span>
                   <span>・リフレッシュ特別有給休暇（連続９日）</span>
                   <span>・年末・年始特別有給休暇</span>
                   <span>・永年勤続休暇</span>
                 </li>
-                <li>
-                  <h3>諸手当</h3>
-                  <span>・通勤手当</span>
-                  <span>・食事手当</span>
-                  <span>・残業手当 ※固定残業制度あり</span>
-                </li>
+
                 <li>
                   <h3>待遇・福利厚生</h3>
                   <span>・健康保険</span>
@@ -75,7 +70,6 @@ const ContainerJobDescription = () => {
                   <span>・厚生年金</span>
                   <span>・企業年金</span>
                   <span>・財形貯蓄制度</span>
-                  <span>・退職金制度</span>
                   <span>・産休・育児休暇</span>
                 </li>
               </ul>

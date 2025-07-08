@@ -18,18 +18,11 @@ type ScheduleItem = {
 type WorkScheduleProps = {
   image: StaticImageData;
   title: string;
-  name: string;
   role: string;
   schedule: ScheduleItem[];
 };
 
-const WorkSchedule = ({
-  image,
-  title,
-  name,
-  role,
-  schedule,
-}: WorkScheduleProps) => {
+const WorkSchedule = ({ image, title, role, schedule }: WorkScheduleProps) => {
   return (
     <>
       <div className={styles.imageWrapper}>
@@ -38,9 +31,7 @@ const WorkSchedule = ({
       <div className={styles.textWrapper}>
         <h3>
           {title}
-          <span>
-            {name}（{role}）
-          </span>
+          <span>（{role}）</span>
         </h3>
         <ul className={styles.listSchedule}>
           {schedule.map((item, index) => (

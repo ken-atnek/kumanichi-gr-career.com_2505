@@ -1,13 +1,13 @@
 /* =======================================
  * 熊日サービス開発 スケジュールデータ
- * URL: src/data/bipuresu-career/scheduleList.ts
+ * URL: src/data/yusou-career/scheduleList.ts
  * Created: 2025-06-30
  * Last updated: 2025-06-30
  * ======================================= */
 import type { StaticImageData } from 'next/image';
-import Img01 from '@/assets/images/bipuresu-career/schedule/list01.webp';
-import Img02 from '@/assets/images/bipuresu-career/schedule/list02.webp';
-import Img03 from '@/assets/images/bipuresu-career/schedule/list03.webp';
+import Img01 from '@/assets/images/yusou-career/schedule/list01.webp';
+import Img02 from '@/assets/images/yusou-career/schedule/list02.webp';
+import Img03 from '@/assets/images/yusou-career/schedule/list03.webp';
 
 export type ScheduleItem = {
   time: string;
@@ -39,7 +39,7 @@ export const scheduleList: ScheduleData[] = [
     questions: [
       {
         question: 'これが私の仕事',
-        answerTitle: '新聞や「くまにちすぱいす」の折込チラシの営業および管理',
+        answerTitle: '物販企画・新規事業開発・チラシデザイン',
         answer: `新聞などを取り扱うデリバリーセンターで販売している商品の企画・管理、物品販売全般の窓口となり各取引メーカー様と価格交渉などの商談を行っています。\nまた、新しいビジネスチャンスを探し、市場や顧客ニーズの調査・分析を行い新規事業の立ち上げも行っています。`,
       },
       {
@@ -73,11 +73,11 @@ export const scheduleList: ScheduleData[] = [
     image: Img02,
     title: 'お客様の大切なチラシを読者の皆様へお届けします',
     dept: '営業部',
-    name: 'A・O',
+    name: 'T・O',
     questions: [
       {
         question: 'これが私の仕事',
-        answerTitle: '物販企画・新規事業開発・チラシデザイン',
+        answerTitle: '新聞や「くまにちすぱいす」の折込チラシの営業および管理',
         answer: `熊本県内で流通する新聞やくまにちすぱいすの折込チラシの営業及び管理業務が主な仕事です。県内外の広告会社や広告主様との折衝は大きな責任が伴いますが、やりがいがあります。また、熊本日日新聞の販売センターの配達網を生かした「熊日デリバリー」の管理業務も行っています。`,
       },
       {
@@ -92,13 +92,13 @@ export const scheduleList: ScheduleData[] = [
       },
     ],
     schedule: [
-      { time: '09:00〜', activity: '社内ミーティング・スケジュール確認' },
-      { time: '09:30〜', activity: 'メールチェック・クライアント対応' },
-      { time: '10:00〜', activity: '広告掲載プランの提案資料作成' },
+      { time: '09:00〜', activity: '部内ミーティング' },
+      { time: '09:30〜', activity: 'クライアントからのメールチェック' },
+      { time: '10:00〜', activity: '書類・営業資料の作成' },
       { time: '12:00〜', activity: 'ランチ' },
-      { time: '13:00〜', activity: 'クライアント訪問・商談' },
-      { time: '15:00〜', activity: '原稿内容確認・校正' },
-      { time: '16:00〜', activity: '社内打ち合わせ・進行管理' },
+      { time: '13:00〜', activity: '広告審査' },
+      { time: '14:30〜', activity: 'クライアントとの打ち合わせ' },
+      { time: '16:00〜', activity: '折込手配、デリバリー管理作業' },
       { time: '17:00', activity: '退社' },
     ],
   },
@@ -130,12 +130,15 @@ export const scheduleList: ScheduleData[] = [
     ],
     schedule: [
       { time: '09：00～', activity: '部内ミーティング・業務分担確認' },
-      { time: '09：30～', activity: 'メール確認・社内連絡対応' },
-      { time: '10：00～', activity: '経費精算処理・支払予定確認' },
+      { time: '09：15～', activity: '各部署からの連絡事項を確認' },
+      { time: '10：00～', activity: '経理業務（支払・入金確認）' },
       { time: '12：00～', activity: 'ランチ' },
-      { time: '13：00～', activity: '取引先との支払条件打ち合わせ' },
-      { time: '14：30～', activity: '月次決算資料作成' },
-      { time: '16：00～', activity: '翌日のタスク整理・社内共有資料作成' },
+      { time: '13：00～', activity: '取引先との打ち合わせ' },
+      { time: '15：00～', activity: '月次資料作成' },
+      {
+        time: '16：30～',
+        activity: '翌日のスケジュール確認・段取り＆資料作成',
+      },
       { time: '17：00', activity: '退社' },
     ],
   },

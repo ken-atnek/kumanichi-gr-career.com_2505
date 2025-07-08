@@ -36,7 +36,7 @@ const ContainerJobDescription = () => {
           <dl>
             <dt>求める能力・経験</dt>
             <dd>
-              <em>業界未経験でもOK)</em>
+              <em>業界未経験でもOK</em>
               ①オペレーション能力
               <br />
               ②リスク管理能力

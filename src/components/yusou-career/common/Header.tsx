@@ -84,7 +84,7 @@ const Header = () => {
           }`}
         >
           <Link
-            href="/"
+            href="/yusou-career/"
             className={`${styles.itemLink} ${styles.linkTop}`}
             onClick={closeMenu}
           >

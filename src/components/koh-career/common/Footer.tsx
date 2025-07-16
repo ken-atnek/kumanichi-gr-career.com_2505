@@ -14,22 +14,40 @@ const Footer = () => {
           <Link href="/" className={`${styles.itemLink} ${styles.linkTop}`}>
             TOP
           </Link>
-          <Link href="/#ContainerNews" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#KohContainerNews"
+            className={styles.itemLink}
+          >
             NEWS
           </Link>
-          <Link href="/#ContainerAbout" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#KohContainerAbout"
+            className={styles.itemLink}
+          >
             about
           </Link>
-          <Link href="/#ContainerFlow" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#KohContainerGreeting"
+            className={styles.itemLink}
+          >
             greeting
           </Link>
-          <Link href="/#ContainerFaq" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#KohContainerSchedule"
+            className={styles.itemLink}
+          >
             schedule
           </Link>
-          <Link href="/#ContainerFaq" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#KohContainerJobDescription"
+            className={styles.itemLink}
+          >
             job description
           </Link>
-          <Link href="/#ContainerContact" className={styles.itemLink}>
+          <Link
+            href="/koh-career/#ContainerEntrySheet"
+            className={styles.itemLink}
+          >
             entry
           </Link>
         </nav>

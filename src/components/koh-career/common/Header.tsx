@@ -91,42 +91,42 @@ const Header = () => {
             TOP
           </Link>
           <Link
-            href="/digital-career/#DigitalContainerNews"
+            href="/koh-career/#KohContainerNews"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             NEWS
           </Link>
           <Link
-            href="/#ContainerAbout"
+            href="/koh-career/#KohContainerAbout"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             about
           </Link>
           <Link
-            href="/#ContainerFlow"
+            href="/koh-career/#KohContainerGreeting"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             greeting
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/koh-career/#KohContainerSchedule"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             schedule
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/koh-career/#KohContainerJobDescription"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             job description
           </Link>
           <Link
-            href="/#ContainerContact"
+            href="/koh-career/#ContainerEntrySheet"
             className={styles.itemLink}
             onClick={closeMenu}
           >

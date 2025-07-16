@@ -91,48 +91,48 @@ const Header = () => {
             TOP
           </Link>
           <Link
-            href="/digital-career/#DigitalContainerNews"
+            href="/sv-career/#SvContainerNews"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             NEWS
           </Link>
           <Link
-            href="/#ContainerAbout"
+            href="/sv-career/#SvContainerAbout"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             about
           </Link>
           <Link
-            href="/#ContainerFlow"
+            href="/sv-career/#SvContainerGreeting"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             greeting
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/sv-career/#SvContainerSchedule"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             schedule
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/sv-career/#SvContainerJobDescription"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             job description
           </Link>
-          <Link
-            href="/#ContainerContact"
+          {/* <Link
+            href="/sv-career/#ContainerEntrySheet"
             sv-career
             className={styles.itemLink}
             onClick={closeMenu}
           >
             entry
-          </Link>
+          </Link> */}
           <Link href="/" className={styles.itemLink} onClick={closeMenu}>
             総合トップ
           </Link>

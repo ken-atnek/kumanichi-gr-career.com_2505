@@ -12,6 +12,7 @@
 .containerAbout,
 .containerConcept,
 .containerGreeting,
+.containerMovie,
 .containerSchedule,
 .containerJobDescription,
 .containerQuestions {
@@ -535,7 +536,27 @@
         }
     }
 }
+.containerMovie {
+    gap: 2em 0;
+    padding-top: 2em;
+    @include sp {
+        gap: 4vw 0;
+    }
+    h2 {
+        font-size: FZ(20);
+    }
+    .boxHeadMovie {
+        width: 100%;
+        iframe {
+            width: 100%;
+            margin-inline: auto;
+            max-width: 64rem;
+            aspect-ratio: 16/9;
+        }
+    }
+}
 .containerJobDescription {
+    padding-top: 3em;
     padding-bottom: 2em;
     .boxJobDescription {
         position: relative;

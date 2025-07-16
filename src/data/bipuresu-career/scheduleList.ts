@@ -1,8 +1,8 @@
 /* =======================================
- * 熊日サービス開発 スケジュールデータ
+ * 熊日会館スケジュールデータ
  * URL: src/data/bipuresu-career/scheduleList.ts
  * Created: 2025-06-30
- * Last updated: 2025-06-30
+ * Last updated: 2025-07-07
  * ======================================= */
 import type { StaticImageData } from 'next/image';
 import Img01 from '@/assets/images/bipuresu-career/schedule/list01.webp';
@@ -64,14 +64,13 @@ export const scheduleList: ScheduleData[] = [
     image: Img03,
     title: '社員：C（ベテラン社員）の1日',
     schedule: [
-      { time: '09:30', activity: 'メール・原稿チェック' },
-      { time: '10:00', activity: '制作業務' },
-      { time: '13:00', activity: '昼食' },
-      { time: '14:00', activity: 'ライターと打ち合わせ' },
-      { time: '15:00', activity: '工程会議' },
-      { time: '15:30', activity: 'オンデマンド印刷' },
-      { time: '16:00', activity: '制作業務' },
-      { time: '17:30', activity: '退社' },
+      { time: '09:00～', activity: '社内資料の決裁' },
+      { time: '10:00～', activity: '社内連絡会' },
+      { time: '11:00～', activity: '会計事務照合と決裁' },
+      { time: '12:00～', activity: '昼食' },
+      { time: '13:00～', activity: '財務確認' },
+      { time: '16:00～', activity: '総務業務' },
+      { time: '～17:30', activity: '退社' },
     ],
     noteTitle: '【現在の仕事内容について】',
     note: '弊社の総務は、総務業務だけでなく経理や人事業務なども含みます。経理業務では日々の仕訳から、年度末の決算まで行います。いろいろな法改正へも対応、順守しています。業務は多岐にわたりますが、『会社』を陰から支える大切な業務です。',

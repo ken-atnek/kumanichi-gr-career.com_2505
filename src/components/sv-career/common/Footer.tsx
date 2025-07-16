@@ -14,24 +14,33 @@ const Footer = () => {
           <Link href="/" className={`${styles.itemLink} ${styles.linkTop}`}>
             TOP
           </Link>
-          <Link href="/#ContainerNews" className={styles.itemLink}>
+          <Link href="/sv-career/#SvContainerNews" className={styles.itemLink}>
             NEWS
           </Link>
-          <Link href="/#ContainerAbout" className={styles.itemLink}>
+          <Link href="/sv-career/#SvContainerAbout" className={styles.itemLink}>
             about
           </Link>
-          <Link href="/#ContainerFlow" className={styles.itemLink}>
+          <Link
+            href="/sv-career/#SvContainerGreeting"
+            className={styles.itemLink}
+          >
             greeting
           </Link>
-          <Link href="/#ContainerFaq" className={styles.itemLink}>
+          <Link
+            href="/sv-career/#SvContainerSchedule"
+            className={styles.itemLink}
+          >
             schedule
           </Link>
-          <Link href="/#ContainerFaq" className={styles.itemLink}>
+          <Link
+            href="/sv-career/#SvContainerJobDescription"
+            className={styles.itemLink}
+          >
             job description
           </Link>
-          <Link href="/#ContainerContact" className={styles.itemLink}>
+          {/* <Link href="/sv-career/#ContainerContact" className={styles.itemLink}>
             entry
-          </Link>
+          </Link> */}
         </nav>
         <div className={styles.copyright}>
           Copyright KUMANICHI SERVICE KAIHATSU All Rights Reserved.

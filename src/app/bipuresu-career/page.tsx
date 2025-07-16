@@ -2,7 +2,7 @@
  * 熊日会館 TOPページ
  * URL:src/app/bipuresu-career/page.tsx
  * Created: 2025-06-30
- * Last updated: 2025-06-30
+ * Last updated: 2025-07-07
  * ======================================= */
 import Link from 'next/link';
 import styles from '@/styles/bipuresu-career/PageTop.module.scss';
@@ -22,17 +22,16 @@ import ContainerJobDescription from '@/components/bipuresu-career/ContainerJobDe
 import ContainerQuestions from '@/components/bipuresu-career/ContainerQuestions';
 export const generateMetadata = (): Metadata => {
   return {
-    title:
-      '株式会社サービス開発 キャリア採用サイト｜熊本で働く、地域と生きる。',
+    title: '株式会社熊日会館 キャリア採用サイト｜熊本で働く、地域と生きる。',
     description:
-      '株式会社サービス開発のキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
+      '株式会社熊日会館のキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
   };
 };
 export default function Home() {
   return (
     <>
       <ContainerSlide />
-      <section className={styles.containerNews} id="DigitalContainerNews">
+      <section className={styles.containerNews} id="BipuresuContainerNews">
         <article>
           <div className={styles.wrapH2}>
             <h2>news</h2>
@@ -46,7 +45,7 @@ export default function Home() {
           />
         </article>
       </section>
-      <section className={styles.containerBlog} id="DigitalContainerBlog">
+      <section className={styles.containerBlog} id="BipuresuContainerBlog">
         <article>
           <BlogList
             items={blogData
@@ -58,12 +57,12 @@ export default function Home() {
               .slice(0, 3)}
             isTopPage
           />
-          <Link href="/sv-career/blog/" className={styles.linkBlog}>
+          <Link href="/bipuresu-career/blog/" className={styles.linkBlog}>
             すべてを見る
           </Link>
         </article>
       </section>
-      <section className={styles.containerAbout} id="DigitalContainerAbout">
+      <section className={styles.containerAbout} id="BipuresuContainerAbout">
         <article>
           <div className={styles.wrapH2}>
             <h2>ABOUT</h2>
@@ -74,7 +73,7 @@ export default function Home() {
       </section>
       <section
         className={styles.containerGreeting}
-        id="DigitalContainerGreeting"
+        id="BipuresuContainerGreeting"
       >
         <article>
           <div className={styles.wrapH2}>
@@ -99,7 +98,7 @@ export default function Home() {
       </section>
       <section
         className={styles.containerSchedule}
-        id="DigitalContainerSchedule"
+        id="BipuresuContainerSchedule"
       >
         <article>
           <div className={styles.wrapH2}>

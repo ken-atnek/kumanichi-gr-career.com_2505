@@ -1,8 +1,8 @@
 /* =======================================
- * 熊日サービス開発 ブログページ
- * URL: src/app/sv-career/blog/page.tsx
+ * 熊日会館 ブログページ
+ * URL: src/app/bipuresu-career/blog/page.tsx
  * Created: 2025-06-30
- * Last updated: 2025-06-30
+ * Last updated: 2025-07-07
  * ======================================= */
 import BlogList from '@/components/blog/BlogList';
 import { blogData } from '@/data/blogData';
@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 export const generateMetadata = (): Metadata => {
   return {
-    title: '熊日グルー株式会社熊日サービス開発 キャリア採用サイト',
+    title: '株式会社熊日会館 キャリア採用サイト',
     description: '',
   };
 };
@@ -35,8 +35,7 @@ export default function BlogPage() {
             items={blogData.filter(
               (item) =>
                 item.category.parent === '熊日グループ' &&
-                (!item.category.child ||
-                  item.category.child === '熊日サービス開発')
+                (!item.category.child || item.category.child === '熊日会館')
             )}
             isTopPage={false}
           />

@@ -10,7 +10,10 @@ import ExternalLink from '@/components/common/ExternalLink';
 
 const ContainerJobDescription = () => {
   return (
-    <section className={styles.containerJobDescription}>
+    <section
+      className={styles.containerJobDescription}
+      id="BipuresuContainerJobDescription"
+    >
       <article>
         <div className={styles.wrapH2}>
           <h2>JOB DESCRIPTION</h2>

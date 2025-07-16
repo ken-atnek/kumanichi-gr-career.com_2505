@@ -12,6 +12,7 @@
     @include sp {
         padding-inline: 0;
         z-index: 200;
+        width: 100%;
     }
     article {
         max-width: $articleMaxWidth;
@@ -23,11 +24,21 @@
         @include sp {
             padding: 2vw;
             background-color: #fff;
+            display: contents;
+            width: 100%;
+            border: solid 1px #00f;
         }
         .linkH1 {
             font-size: inherit;
             color: #fff;
             transition: 0.3s ease-out;
+            @include sp {
+                position: absolute;
+                top: 2vw;
+                left: 2vw;
+                z-index: 5;
+                width: 100%;
+            }
             h1 {
                 text-transform: uppercase;
                 font-size: FZ(24);
@@ -58,10 +69,16 @@
             }
             p {
                 font-size: FZ(16);
+                @include sp {
+                    font-size: FZ(12);
+                }
             }
             @include sp {
                 gap: 1vw 0;
                 align-items: flex-start;
+                width: 100%;
+                background-color: #fff;
+                padding: 2vw;
             }
         }
 
@@ -80,10 +97,16 @@
             }
             p {
                 font-size: FZ(16);
+                @include sp {
+                    font-size: FZ(12);
+                }
             }
             @include sp {
                 gap: 1vw 0;
                 align-items: flex-start;
+                width: 100%;
+                background-color: #fff;
+                padding: 2vw;
             }
         }
 
@@ -103,10 +126,17 @@
             p {
                 font-size: FZ(14);
                 margin-top: 0.3em;
+                @include sp {
+                    font-size: FZ(12);
+                    margin-top: unset;
+                }
             }
             @include sp {
                 gap: 1vw 0;
                 align-items: flex-start;
+                width: 100%;
+                background-color: #fff;
+                padding: 2vw;
             }
         }
 
@@ -130,6 +160,9 @@
             @include sp {
                 gap: 1vw 0;
                 align-items: flex-start;
+                width: 100%;
+                background-color: #fff;
+                padding: 2vw;
             }
         }
         nav {
@@ -157,12 +190,14 @@
                 height: 100vh;
                 height: 100dvh;
                 flex-direction: column;
+                justify-content: flex-start;
                 align-items: flex-start;
                 padding: 20vw 0 0 8vw;
                 background-color: #fff;
                 translate: 100vw;
                 transition: 0.3s ease-out;
                 opacity: 0;
+                gap: 4vw 0;
                 &.is-open {
                     translate: 0;
                     opacity: 1;

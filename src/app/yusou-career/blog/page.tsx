@@ -11,7 +11,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 export const generateMetadata = (): Metadata => {
   return {
-    title: '熊日グルー株式会社熊日サービス開発 キャリア採用サイト',
+    title: '熊日メディアコム キャリア採用サイト',
     description: '',
   };
 };
@@ -36,7 +36,7 @@ export default function BlogPage() {
               (item) =>
                 item.category.parent === '熊日グループ' &&
                 (!item.category.child ||
-                  item.category.child === '熊日サービス開発')
+                  item.category.child === '熊日メディアコム')
             )}
             isTopPage={false}
           />

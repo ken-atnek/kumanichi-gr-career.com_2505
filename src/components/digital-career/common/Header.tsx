@@ -98,35 +98,35 @@ const Header = () => {
             NEWS
           </Link>
           <Link
-            href="/#ContainerAbout"
+            href="/digital-career/#DigitalContainerAbout"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             about
           </Link>
           <Link
-            href="/#ContainerFlow"
+            href="/digital-career/#DigitalContainerGreeting"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             greeting
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/digital-career/#DigitalContainerSchedule"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             schedule
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/digital-career/#DigitalContainerJobDescription"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             job description
           </Link>
           <Link
-            href="/#ContainerContact"
+            href="/digital-career/#ContainerEntrySheet"
             className={styles.itemLink}
             onClick={closeMenu}
           >

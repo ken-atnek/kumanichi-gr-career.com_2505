@@ -84,49 +84,49 @@ const Header = () => {
           }`}
         >
           <Link
-            href="/"
+            href="/yusou-career/"
             className={`${styles.itemLink} ${styles.linkTop}`}
             onClick={closeMenu}
           >
             TOP
           </Link>
           <Link
-            href="/digital-career/#DigitalContainerNews"
+            href="/yusou-career/#YusouContainerNews"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             NEWS
           </Link>
           <Link
-            href="/#ContainerAbout"
+            href="/yusou-career/#YusouContainerAbout"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             about
           </Link>
           <Link
-            href="/#ContainerFlow"
+            href="/yusou-career/#YusouContainerGreeting"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             greeting
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/yusou-career/#YusouContainerSchedule"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             schedule
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/yusou-career/#YusouContainerJobDescription"
             className={styles.itemLink}
             onClick={closeMenu}
           >
             job description
           </Link>
           <Link
-            href="/#ContainerContact"
+            href="/yusou-career/#ContainerEntrySheet"
             sv-career
             className={styles.itemLink}
             onClick={closeMenu}

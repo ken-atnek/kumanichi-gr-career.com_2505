@@ -4,8 +4,11 @@
  * Created: 2025-06-18
  * Last updated: 2025-06-20
  * ======================================= */
-import BlogList from '@/components/blog/BlogList';
-import { blogData } from '@/data/blogData';
+// import BlogList from '@/components/blog/BlogList';
+// import { blogData } from '@/data/blogData';
+
+import NewsClient from '@/components/blog/NewsClient';
+
 import styles from '@/styles/PageBlog.module.scss';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
@@ -35,7 +38,8 @@ export default function BlogPage() {
         </section>
         <section className={styles.containerBlogList}>
           <article>
-            <BlogList items={blogData} isTopPage={false} />
+            {/* <BlogList items={blogData} isTopPage={false} /> */}
+            <NewsClient isShopId="" />
           </article>
         </section>
       </main>

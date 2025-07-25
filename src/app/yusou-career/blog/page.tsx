@@ -4,8 +4,11 @@
  * Created: 2025-06-30
  * Last updated: 2025-06-30
  * ======================================= */
-import BlogList from '@/components/blog/BlogList';
-import { blogData } from '@/data/blogData';
+// import BlogList from '@/components/blog/BlogList';
+// import { blogData } from '@/data/blogData';
+
+import NewsClient from '@/components/blog/NewsClient';
+
 import styles from '@/styles/PageBlog.module.scss';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -31,7 +34,7 @@ export default function BlogPage() {
       </section>
       <section className={styles.containerBlogList}>
         <article>
-          <BlogList
+          {/* <BlogList
             items={blogData.filter(
               (item) =>
                 item.category.parent === '熊日グループ' &&
@@ -39,7 +42,8 @@ export default function BlogPage() {
                   item.category.child === '熊日メディアコム')
             )}
             isTopPage={false}
-          />
+          /> */}
+          <NewsClient isShopId="career@yusou" />
         </article>
       </section>
     </>

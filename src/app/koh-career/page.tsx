@@ -8,8 +8,12 @@ import Link from 'next/link';
 import styles from '@/styles/koh-career/PageTop.module.scss';
 import entrySheetStyles from '@/styles/components/ContainerEntrySheet.module.scss';
 import ContainerEntrySheet from '@/components/ContainerEntrySheet';
-import BlogList from '@/components/blog/BlogList';
-import { blogData } from '@/data/blogData';
+
+// import BlogList from '@/components/blog/BlogList';
+// import { blogData } from '@/data/blogData';
+
+import TopNewsClient from '@/components/blog/TopNewsClient';
+
 import type { Metadata } from 'next';
 import { newsList } from '@/data/newsList';
 import NewsList from '@/components/NewsList';
@@ -46,7 +50,7 @@ export default function Home() {
       </section>
       <section className={styles.containerBlog} id="KohContainerBlog">
         <article>
-          <BlogList
+          {/* <BlogList
             items={blogData
               .filter(
                 (item) =>
@@ -55,7 +59,8 @@ export default function Home() {
               )
               .slice(0, 3)}
             isTopPage
-          />
+          /> */}
+          <TopNewsClient isShopId="career@koh" />
           <Link href="/koh-career/blog/" className={styles.linkBlog}>
             すべてを見る
           </Link>

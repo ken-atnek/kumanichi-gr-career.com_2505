@@ -7,8 +7,12 @@
 import Link from 'next/link';
 import styles from '@/styles/top.module.scss';
 import ContainerSlide from '@/components/ContainerSlide';
-import BlogList from '@/components/blog/BlogList';
-import { blogData } from '@/data/blogData';
+
+// import BlogList from '@/components/blog/BlogList';
+// import { blogData } from '@/data/blogData';
+
+import TopNewsClient from '@/components/blog/TopNewsClient';
+
 import OrganizationalChart from '@/assets/images/organizational-chart.webp';
 import entrySheetStyles from '@/styles/components/ContainerEntrySheet.module.scss';
 import ContainerEntrySheet from '@/components/ContainerEntrySheet';
@@ -43,7 +47,8 @@ export default function Home() {
         </section>
         <section className={styles.containerBlog} id="ContainerBlog">
           <article>
-            <BlogList items={blogData.slice(0, 3)} isTopPage />
+            {/* <BlogList items={blogData.slice(0, 3)} isTopPage /> */}
+            <TopNewsClient isShopId="" />
             <Link href="/blog/" className={styles.linkBlog}>
               すべてを見る
             </Link>

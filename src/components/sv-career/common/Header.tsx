@@ -127,7 +127,6 @@ const Header = () => {
           </Link>
           {/* <Link
             href="/sv-career/#ContainerEntrySheet"
-            sv-career
             className={styles.itemLink}
             onClick={closeMenu}
           >

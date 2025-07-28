@@ -13,6 +13,7 @@ import Image from 'next/image';
 type Props = {
   items: BlogItem[];
   isTopPage?: boolean;
+  showBody?: boolean;
 };
 
 const BlogList = ({ items, isTopPage }: Props) => {
@@ -23,9 +24,11 @@ const BlogList = ({ items, isTopPage }: Props) => {
           key={item.id}
           className={`${styles.blogItem} ${isTopPage ? styles.isTopPage : ''}`}
         >
-          <Link href={`/blog/${item.id}`} className={styles.itemLink}></Link>
+          <Link href={`/blog/detail?s_id=${item.s_id}&id=${item.id}`} className={styles.itemLink}></Link>
           <Image
-            src={item.body.thumb}
+            src={item.thumb}
+            width={373}
+            height={210}
             alt={item.title}
             className={styles.thumbnail}
           />

@@ -292,6 +292,11 @@
                 font-size: FZ(20);
                 font-weight: 500;
             }
+            a {
+                font-size: inherit;
+                line-height: 1.8em;
+                letter-spacing: 0.04em;
+            }
             p {
                 font-size: FZ(14);
                 line-height: 1.8em;

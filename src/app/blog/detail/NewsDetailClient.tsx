@@ -41,7 +41,7 @@ export default function NewsDetailPage() {
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!id || s_id === null) return;
-    fetch(`https://demo-kumanichi-gr-career.tuna-pic.co.jp/api/news/?sid=${s_id}&id=${id}`)
+    fetch(`https://kumanichi-gr-career.com/api/news/?sid=${s_id}&id=${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('記事が見つかりません');
         return res.json();

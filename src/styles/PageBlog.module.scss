@@ -266,32 +266,36 @@
             display: flex;
             flex-direction: column;
             padding: 2em 0;
+            div {
+                font-size: inherit;
+                line-height: 1.8em;
+                text-align: justify;
+                letter-spacing: 0.04em;
+            }
+            strong {
+                font-weight: 700;
+                letter-spacing: 0.04em;
+            }
+            em {
+                font-style: italic;
+            }
+            blockquote {
+                border-left: 0.3em solid #ccc;
+                margin-left: 0.3em;
+                padding-left: 0.6em;
+                font-size: inherit;
+                text-align: justify;
+                line-height: 1.8em;
+                letter-spacing: 0.04em;
+            }
             h4 {
                 font-size: FZ(20);
                 font-weight: 500;
             }
-            dl {
+            a {
                 font-size: inherit;
-                display: flex;
-                flex-direction: column;
-                gap: 1em 0;
-                padding: 2em 0;
-                img {
-                    width: fit-content;
-                    max-width: 100%;
-                    margin-inline: auto;
-                }
-                dt {
-                    font-size: FZ(18);
-                    margin-top: 1.6em;
-                    letter-spacing: 0.2em;
-                }
-                dd {
-                    font-size: FZ(14);
-                    text-align: justify;
-                    line-height: 1.8em;
-                    letter-spacing: 0.04em;
-                }
+                line-height: 1.8em;
+                letter-spacing: 0.04em;
             }
             p {
                 font-size: FZ(14);

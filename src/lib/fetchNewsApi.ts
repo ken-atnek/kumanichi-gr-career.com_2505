@@ -20,7 +20,7 @@ export async function fetchNews(
   shopId: string,
   limit = 3,
   offset = 0,
-  apiUrl = `https://demo-kumanichi-gr-career.tuna-pic.co.jp/api/news/?sid=${shopId}&limit=${limit}&offset=${offset}`
+  apiUrl = `https://kumanichi-gr-career.com/api/news/?sid=${shopId}&limit=${limit}&offset=${offset}`
 ): Promise<{ news: BlogItem[]; total: number }> {
   try {
     const res = await fetch(apiUrl);

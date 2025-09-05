@@ -116,7 +116,7 @@ export default function Home() {
         <div className={styles.boxHeadMovie}>
           <iframe
             title="熊日デジタル紹介動画"
-            src="https://www.youtube.com/embed/JioiM11f66Q?loop=0&amp;autoplay=0&amp;fs=1&amp;rel=0"
+            src="https://www.youtube.com/embed/XI4_cIJgQFU?si=j5WbGoLrz-MiZ6xq"
             allowFullScreen
           ></iframe>
         </div>

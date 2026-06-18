@@ -31,6 +31,9 @@ export const generateMetadata = (): Metadata => {
       '熊本日日新聞グループ キャリア採用サイト｜熊本で働く、地域と生きる。',
     description:
       '熊本日日新聞グループのキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
+    alternates: {
+      canonical: '/',
+    },
   };
 };
 export default function Home() {

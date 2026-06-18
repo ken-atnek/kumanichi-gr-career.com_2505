@@ -59,7 +59,7 @@ export default function NewsDetailPage() {
       <main>
         <section className={styles.containerDetailTitle}>
           <article>
-            <h2>{data.k_title}</h2>
+            <h1>{data.k_title}</h1>
             <div className={styles.breadcrumb}>
               <Link href="/">HOME</Link>
               <Link href="/blog/">NEWS</Link>

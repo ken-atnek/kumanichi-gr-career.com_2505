@@ -16,8 +16,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 export const generateMetadata = (): Metadata => {
   return {
-    title: '熊日グループキャリア採用',
-    description: '',
+    title: 'お知らせ一覧｜熊本日日新聞グループ キャリア採用サイト',
+    description:
+      '熊本日日新聞グループ キャリア採用サイトのお知らせ一覧です。採用情報や各社の最新情報を掲載しています。',
+    alternates: {
+      canonical: '/blog/',
+    },
   };
 };
 export default function BlogPage() {
@@ -27,7 +31,7 @@ export default function BlogPage() {
       <main>
         <section className={styles.containerTitle}>
           <article>
-            <h2>news</h2>
+            <h1>news</h1>
             <div className={styles.breadcrumb}>
               <Link href="/" className={styles.itemLink}>
                 HOME

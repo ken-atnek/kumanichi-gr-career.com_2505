@@ -34,6 +34,9 @@ export const generateMetadata = (): Metadata => {
     title: '熊日メディアコム キャリア採用サイト｜熊本で働く、地域と生きる。',
     description:
       '熊日メディアコムのキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？',
+    alternates: {
+      canonical: '/yusou-career/',
+    },
   };
 };
 export default function Home() {

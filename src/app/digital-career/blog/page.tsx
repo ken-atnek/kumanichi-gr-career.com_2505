@@ -14,8 +14,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 export const generateMetadata = (): Metadata => {
   return {
-    title: '熊日グルー株式会社熊日デジタル キャリア採用サイト',
-    description: '',
+    title: '株式会社熊日デジタル お知らせ一覧｜キャリア採用サイト',
+    description:
+      '株式会社熊日デジタルのキャリア採用サイトに掲載しているお知らせ一覧です。',
+    alternates: {
+      canonical: '/digital-career/blog/',
+    },
   };
 };
 export default function BlogPage() {
@@ -23,7 +27,7 @@ export default function BlogPage() {
     <>
       <section className={styles.containerTitle}>
         <article>
-          <h2>news</h2>
+          <h1>news</h1>
           <div className={styles.breadcrumb}>
             <Link href="/" className={styles.itemLink}>
               HOME

@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && rm -f out/404.html && rm -rf out/404",
+    "dev": "cross-env NODE_OPTIONS=\"--no-warnings --no-deprecation\" next dev",
+    "build": "npm run build:demo",
+    "build:demo": "cross-env NEXT_PUBLIC_IS_REAL_PROD=false NEXT_PUBLIC_METADATA_BASE=https://demo.kumanichi-gr-career.com/ next build && rimraf out/404.html out/404 && node scripts/prune-export.mjs",
+    "build:prod": "cross-env NEXT_PUBLIC_IS_REAL_PROD=true NEXT_PUBLIC_METADATA_BASE=https://kumanichi-gr-career.com/ next build && rimraf out/404.html out/404 && node scripts/prune-export.mjs",
     "start": "next start",
     "lint": "next lint",
-    "lint:style": "stylelint \"src/**/*.scss\" --fix"
+    "lint:style": "stylelint \"src/**/*.scss\"",
+    "lint:style:fix": "stylelint \"src/**/*.scss\" --fix"
   },
   "dependencies": {
     "next": "15.3.2",
@@ -20,13 +23,15 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "prettier": "^3.5.3",
+    "rimraf": "^6.1.3",
     "sass": "^1.88.0",
     "stylelint": "^16.19.1",
     "stylelint-config-standard-scss": "^15.0.0",
     "stylelint-scss": "^6.12.0",
-    "typescript": "^5"
+    "typescript": "^6.0.3"
   }
 }

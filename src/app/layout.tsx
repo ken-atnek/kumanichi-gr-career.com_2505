@@ -7,54 +7,47 @@
 
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import { Noto_Sans_JP } from 'next/font/google';
-import { Jost } from 'next/font/google';
-import { Zilla_Slab } from 'next/font/google';
+import { isRealProduction } from '@/lib/env';
 
-const notoSans = Noto_Sans_JP({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-  display: 'swap',
-});
-const jost = Jost({
-  subsets: ['latin'], // 必要に応じて 'latin-ext' など追加
-  weight: ['400', '500', '700'], // 必要なウェイトだけ指定
-  display: 'swap', // 推奨
-});
-const zillaSlab = Zilla_Slab({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
-});
-// 実際の本番環境かどうかを判定
-const isRealProduction = process.env.NEXT_PUBLIC_IS_REAL_PROD === 'true';
+const siteName = '熊本日日新聞グループ キャリア採用サイト';
+const siteDescription =
+  '熊本日日新聞グループのキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？';
+const defaultOgImage = '/images/slide/slide01.webp';
 
 // 本番のみ metadataBase を設定
 const metadataBase = isRealProduction
   ? new URL(
-      process.env.NEXT_PUBLIC_METADATA_BASE ||
-        'https://kumanichi-gr-career.com/'
+      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://kumanichi-gr-career.com'
     )
   : undefined;
 
 export const metadata: Metadata = {
+  title: siteName,
+  description: siteDescription,
   ...(isRealProduction && {
     metadataBase,
     openGraph: {
+      title: siteName,
+      description: siteDescription,
+      siteName,
       url: metadataBase?.toString(),
       type: 'website',
       images: [
         {
-          url: './images/ogp.jpg',
+          url: defaultOgImage,
           width: 1200,
           height: 630,
           alt: '熊日グループキャリア採用のOGP画像',
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: siteName,
+      description: siteDescription,
+      images: [defaultOgImage],
+    },
   }),
-  title: ' 熊日グループキャリア採用',
-  description: isRealProduction ? '熊日グループキャリア採用。' : undefined,
   robots: isRealProduction ? 'index, follow' : 'noindex, nofollow',
   icons: [
     {
@@ -74,15 +67,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      className={`${notoSans.className} ${jost.className} ${zillaSlab.className}`}
-    >
+    <html lang="ja">
       <head>
-        <meta
-          name="robots"
-          content={isRealProduction ? 'index, follow' : 'noindex, nofollow'}
-        />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"

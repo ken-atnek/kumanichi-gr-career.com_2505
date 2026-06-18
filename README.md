@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# kumanichi-gr-career.com_2505
 
-## Getting Started
+熊日グループ採用サイトの引き継ぎ用 Next.js repo。  
+2026-06-18 時点では `create-next-app` 初期状態に近いため、まずは docs と static export 方針を先に整備している。
 
-First, run the development server:
+## ドキュメント参照順
+
+1. `AGENTS.md`
+2. `docs/PAGE_STRUCTURE.md`
+3. `docs/rules/nextjs-export.md`
+4. `docs/seo/SEO_SETUP.md`
+
+## 開発コマンド
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 現在の前提
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 15 / App Router
+- TypeScript
+- static export を基本方針として運用予定
+- 旧サイトのページ構成や文言はこれから棚卸し
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## まずやること
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 旧サイトのページ一覧を `docs/PAGE_STRUCTURE.md` に追記する
+- 本番 / デモ URL を `docs/seo/SEO_SETUP.md` に整理する
+- トップページの情報設計から実装を始める

@@ -16,7 +16,7 @@ const ContainerJobDescription = () => {
           <h2>JOB DESCRIPTION</h2>
           <span>募集要項</span>
         </div>
-        <div className={styles.notice}>現在は募集を停止しております</div>
+        {/* <div className={styles.notice}>現在は募集を停止しております</div> */}
 
         <div
           className={styles.boxJobDescription}
@@ -31,7 +31,7 @@ const ContainerJobDescription = () => {
           <dl>
             <dt>配属先候補名（部署名）</dt>
             <dd>
-              <em>セミナー・企画事業グループ</em>
+              <em>セミナー・企画事業部</em>
               <span>・求める能力・経験</span>
               <p>
                 カルチャーセンターで開催する講座の新規企画／立案に興味がある方。また、各種イベントは、熊本日日新聞社をはじめ社外スタッフと一緒に業務に携わることが多い職種ですので、好奇心旺盛な方をお待ちしています。社会人経験10年以上の方、大歓迎。
@@ -41,7 +41,7 @@ const ContainerJobDescription = () => {
               <p>
                 主に熊本日日新聞の特集紙面や生活情報誌などの組版データ作成に携わっていただきますので、デザインやDTPの経験がある方をお待ちしています。社会人経験10年以上の方、大歓迎。
               </p>
-              <em>出版グループ</em>
+              <em>出版部</em>
               <span>・求める能力・経験</span>
               <p>
                 各種打ち合わせ、予算管理、スケジューリング、編集／校正作業など出版に関わる業務全般に携わって頂きます。一般企業や個人の方からの取材、デザイナー／印刷会社との打ち合わせなどが多いためコミュニケーションが取れる方をお待ちしています。
@@ -101,7 +101,9 @@ const ContainerJobDescription = () => {
             <dt>その他</dt>
             <dd>
               <p>
-                その他、詳しくは熊日サービス開発コーポレートサイトをご覧ください。熊日デジタルコーポレートサイト▼
+                その他、詳しくは熊日サービス開発コーポレートサイトをご覧ください。
+                <br />
+                熊日サービス開発コーポレートサイト▼
                 <br />
                 <ExternalLink
                   href="https://www.kumanichi-sv.co.jp/"

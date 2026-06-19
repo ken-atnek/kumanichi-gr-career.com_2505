@@ -5,10 +5,10 @@
  * Last updated: 2025-06-30
  * ======================================= */
 import type { StaticImageData } from 'next/image';
-import Img01 from '@/assets/images/sv-career/schedule/list01.webp';
-import Img02 from '@/assets/images/sv-career/schedule/list02.webp';
+import Img01 from '@/assets/images/sv-career/260619/jigyou-center-itiniti.jpg';
+import Img02 from '@/assets/images/sv-career/260619/seminar-itiniti.jpg';
 import Img03 from '@/assets/images/sv-career/schedule/list03.webp';
-import Img04 from '@/assets/images/sv-career/schedule/list04.webp';
+import Img04 from '@/assets/images/sv-career/260619/shuppan-itiniti.jpg';
 
 export type ScheduleItem = {
   time: string;
@@ -26,15 +26,15 @@ export type ScheduleData = {
 export const scheduleList: ScheduleData[] = [
   {
     image: Img01,
-    title: 'セミナー・企画事業グループ\n熊日事業センターの1日',
+    title: 'セミナー・企画事業部\n「熊日事業センター」の1日',
     schedule: [
       { time: '09:00', activity: 'スケジュール確認＆メールチェック' },
       {
         time: '09:15',
-        activity: '「熊日学童オリンピック」新聞掲載用名簿チェック',
+        activity: '「熊日学童五輪」新聞掲載用名簿チェック',
       },
       { time: '12:00', activity: '昼食' },
-      { time: '13:00', activity: '「熊日学童オリンピック」開会式会場へ' },
+      { time: '13:00', activity: '「熊日学童五輪」開会式会場へ' },
       {
         time: '14:00',
         activity: '現地着⇒PCセッティング・看板設置などの事前準備',
@@ -46,7 +46,7 @@ export const scheduleList: ScheduleData[] = [
   },
   {
     image: Img02,
-    title: 'セミナー・企画事業グループ\n「熊日生涯学習プラザ」の1日',
+    title: 'セミナー・企画事業部\n「ぷれった熊日」の1日',
 
     schedule: [
       { time: '11:30', activity: '講座準備（教室設営）' },
@@ -60,7 +60,7 @@ export const scheduleList: ScheduleData[] = [
       { time: '19:00', activity: '講師との打ち合わせ' },
       { time: '19:30', activity: '退社' },
     ],
-    noteTitle: '熊日生涯学習プラザはローテーション勤務です。',
+    noteTitle: 'ぷれった熊日はローテーション勤務です。',
     note: '①9:00〜17:00\n②11:30〜19:30\n③13:00〜21:00\n※基本的には①または②の勤務となります',
   },
   {
@@ -78,11 +78,11 @@ export const scheduleList: ScheduleData[] = [
     ],
     noteTitle: 'DTP部はローテーション勤務です。',
 
-    note: '①9:30〜17:30\n②12:00〜20:00\n③13:00〜21:00',
+    note: '①9:30〜17:30\n②12:00〜20:00',
   },
   {
     image: Img04,
-    title: '出版グループの1日',
+    title: '出版部の1日',
     schedule: [
       { time: '09:00', activity: 'スケジュール確認＆メールチェック' },
       { time: '09:15', activity: '編集作業' },

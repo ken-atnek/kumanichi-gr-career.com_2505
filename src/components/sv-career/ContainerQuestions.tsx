@@ -20,7 +20,8 @@ const ContainerQuestions = () => {
         answer: (
           <>
             <p>
-              <Link href="/">こちら</Link>のページからご確認お願いします。
+              <Link href="/#ContainerFlow">こちら</Link>
+              のページからご確認お願いします。
             </p>
             なお、書類は返却いたしません。その後、弊社担当者よりご連絡致します。
           </>

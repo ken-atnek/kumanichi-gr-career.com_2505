@@ -1,8 +1,8 @@
 /* =======================================
  * 熊日グループキャリア採用 Layout
- * URL:src/app/layout.tsx
+ * URL: /src/app/layout.tsx
  * Created: 2025-05-15
- * Last updated: 2025-05-15
+ * Last updated: 2026-06-19
  * ======================================= */
 
 import type { Metadata } from 'next';
@@ -12,7 +12,7 @@ import { isRealProduction } from '@/lib/env';
 const siteName = '熊本日日新聞グループ キャリア採用サイト';
 const siteDescription =
   '熊本日日新聞グループのキャリア採用公式サイト。新聞社からグループ各社まで、多様な職種で中途採用を実施中。熊本の未来を支える仕事に、あなたの経験を活かしませんか？';
-const defaultOgImage = '/images/slide/slide01.webp';
+const defaultOgImage = '/images/ogp.jpg';
 
 // 本番のみ metadataBase を設定
 const metadataBase = isRealProduction

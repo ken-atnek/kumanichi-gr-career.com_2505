@@ -6,8 +6,8 @@
  * ======================================= */
 import Link from 'next/link';
 import styles from '@/styles/sv-career/PageTop.module.scss';
-// import entrySheetStyles from '@/styles/components/ContainerEntrySheet.module.scss';
-// import ContainerEntrySheet from '@/components/ContainerEntrySheet';
+import entrySheetStyles from '@/styles/components/ContainerEntrySheet.module.scss';
+import ContainerEntrySheet from '@/components/ContainerEntrySheet';
 
 // import BlogList from '@/components/blog/BlogList';
 // import { blogData } from '@/data/blogData';
@@ -133,7 +133,7 @@ export default function Home() {
       <ContainerJobDescription />
 
       <ContainerQuestions />
-      {/* <ContainerEntrySheet className={entrySheetStyles.bgRed} /> */}
+      <ContainerEntrySheet className={entrySheetStyles.bgRed} />
     </>
   );
 }
